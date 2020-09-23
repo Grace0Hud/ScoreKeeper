@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFCFC"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTitle"
+        android:layout_width="550dp"
+        android:layout_height="350dp"
+        android:fontFamily="@font/admiration_pains_font"
+        android:gravity="center_horizontal"
+        android:shadowColor="#0E426C"
+        android:shadowDx="2.4"
+        android:shadowDy="4.5"
+        android:text="Score Keeper"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#27347A"
+        android:textSize="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.218" />
+
+    <Button
+        android:id="@+id/homeNewGame"
+        android:layout_width="302dp"
+        android:layout_height="115dp"
+        android:background="#27347A"
+        android:text="New Game"
+        android:textColor="#FFFFFF"
+        android:textSize="50dp"
+        android:fontFamily="@font/stay_happy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
