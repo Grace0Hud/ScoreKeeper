@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
     tools:context=".scoreScreen">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/admiration_pains_font"
+        android:gravity="center_horizontal"
+        android:text="Scores"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#27347A"
+        android:textSize="60dp" />
+
+    <TextView
+        android:id="@+id/scoreOutputTV"
+        android:layout_width="match_parent"
+        android:layout_height="555dp"
+        android:text="Output to go here"
+        android:textSize="50dp" />
+
+    <Button
+        android:id="@+id/newGameScoreScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Game"
+        android:layout_gravity="bottom"
+        android:textSize="60dp"
+        android:background="@drawable/button_border"
+        android:fontFamily="@font/stay_happy"
+        android:textColor="#27347A"/>
+</LinearLayout>
