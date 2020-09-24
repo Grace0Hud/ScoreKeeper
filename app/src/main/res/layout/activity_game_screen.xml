@@ -163,11 +163,12 @@
             android:id="@+id/endGameButton"
             android:layout_width="116dp"
             android:layout_height="wrap_content"
-            android:text="End Game"
-            android:fontFamily="@font/stay_happy"
-            android:textSize="25dp"
+            android:layout_gravity="right"
             android:background="@drawable/button_border"
-            android:layout_gravity="right"/>
+            android:fontFamily="@font/stay_happy"
+            android:onClick="onClickEndGame"
+            android:text="End Game"
+            android:textSize="25dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
