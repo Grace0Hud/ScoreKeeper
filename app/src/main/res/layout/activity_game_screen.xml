@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gameScreen">
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="558dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/admiration_pains_font"
+                android:gravity="center_horizontal"
+                android:text="Game"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#27347A"
+                android:textSize="40dp" />
+
+            <Button
+                android:id="@+id/player1Display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "filler text\nuser info here"
+                android:textColor="#27347A"
+                android:textSize="50dp"
+                android:fontFamily="@font/stay_happy"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/button_border"/>
+
+            <Button
+                android:id="@+id/player2Display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/button_border"
+                android:fontFamily="@font/stay_happy"
+                android:text="filler text\nuser info here"
+                android:textColor="#27347A"
+                android:textSize="50dp" />
+
+            <Button
+                android:id="@+id/player3Display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "filler text\nuser info here"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/button_border"
+                android:textColor="#27347A"
+                android:textSize="50dp"
+                android:fontFamily="@font/stay_happy"/>
+
+            <Button
+                android:id="@+id/player4Display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/button_border"
+                android:fontFamily="@font/stay_happy"
+                android:text="filler text\nuser info here"
+                android:textColor="#27347A"
+                android:textSize="50dp" />
+
+            <Button
+                android:id="@+id/player5Display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "filler text\nuser info here"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/button_border"
+                android:textColor="#27347A"
+                android:textSize="50dp"
+                android:fontFamily="@font/stay_happy"/>
+
+            <Button
+                android:id="@+id/player6Display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "filler text\nuser info here"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/button_border"
+                android:textColor="#27347A"
+                android:textSize="50dp"
+                android:fontFamily="@font/stay_happy"/>
+
+            <Button
+                android:id="@+id/player7Display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "filler text\nuser info here"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/button_border"
+                android:textColor="#27347A"
+                android:textSize="50dp"
+                android:fontFamily="@font/stay_happy"/>
+
+            <Button
+                android:id="@+id/player8Display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "filler text\nuser info here"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/button_border"
+                android:textColor="#27347A"
+                android:textSize="50dp"
+                android:fontFamily="@font/stay_happy"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
