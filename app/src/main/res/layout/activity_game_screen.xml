@@ -169,76 +169,91 @@
             android:background="@drawable/button_border"
             android:layout_gravity="right"/>
 
-        <Button
-            android:id="@+id/minus10"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="30dp"
-            android:layout_marginLeft = "5dp"
-            android:text="-10"
-            android:textSize="30dp"
-            android:background="@drawable/nav_button_styles"
-            android:textColor="#FFFFFF"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom">
 
-        <Button
-            android:id="@+id/minus5"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginLeft="70dp"
-            android:layout_marginBottom="30dp"
-            android:text="-5"
-            android:textSize="30dp"
-            android:background="@drawable/nav_button_styles"
-            android:textColor="#FFFFFF"/>
-        <Button
-            android:id="@+id/minus1"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginLeft="135dp"
-            android:layout_marginBottom="30dp"
-            android:text="-1"
-            android:textSize="30dp"
-            android:background="@drawable/nav_button_styles"
-            android:textColor="#FFFFFF"/>
+            <Button
+                android:id="@+id/minus10"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/nav_button_styles"
+                android:text="-10"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                android:layout_weight="1"/>
 
-        <Button
-            android:id="@+id/plus1"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginLeft="215dp"
-            android:layout_marginBottom="30dp"
-            android:text="+1"
-            android:textSize="30dp"
-            android:background="@drawable/nav_button_styles"
-            android:textColor="#FFFFFF"/>
+            <Button
+                android:id="@+id/minus5"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/nav_button_styles"
+                android:text="-5"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                android:layout_weight="1"/>
 
-        <Button
-            android:id="@+id/plus5"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginLeft="280dp"
-            android:layout_marginBottom="30dp"
-            android:text="+5"
-            android:textSize="30dp"
-            android:background="@drawable/nav_button_styles"
-            android:textColor="#FFFFFF"/>
+            <Button
+                android:id="@+id/minus1"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/nav_button_styles"
+                android:text="-1"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                android:layout_weight="1"/>
 
-        <Button
-            android:id="@+id/plus10"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginLeft = "345dp"
-            android:layout_marginBottom="30dp"
-            android:text="+1"
-            android:textSize="30dp"
-            android:background="@drawable/nav_button_styles"
-            android:textColor="#FFFFFF"/>
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5" />
+
+            <Button
+                android:id="@+id/plus1"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/nav_button_styles"
+                android:text="+1"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/plus5"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/nav_button_styles"
+                android:text="+5"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/plus10"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/nav_button_styles"
+                android:text="+1"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
