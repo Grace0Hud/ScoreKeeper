@@ -18,10 +18,10 @@ public class winScreen extends AppCompatActivity {
     {
         Intent intent = new Intent(this, NewGameScreen.class);
         startActivity(intent);
-    }
+    }//end new game on click
     public void onClickViewScore(View view)
     {
         Intent intent = new Intent(this, scoreScreen.class);
         startActivity(intent);
-    }
+    }//end view scores on click
 }
