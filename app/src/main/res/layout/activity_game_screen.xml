@@ -10,7 +10,7 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="558dp"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -84,12 +84,12 @@
                 android:id="@+id/player5Display"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text = "filler text\nuser info here"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
+                android:fontFamily="@font/stay_happy"
+                android:text="filler text\nuser info here"
                 android:textColor="#27347A"
-                android:textSize="50dp"
-                android:fontFamily="@font/stay_happy"/>
+                android:textSize="50dp" />
 
             <Button
                 android:id="@+id/player6Display"
@@ -123,9 +123,8 @@
                 android:textColor="#27347A"
                 android:textSize="50dp"
                 android:fontFamily="@font/stay_happy"/>
+
         </LinearLayout>
-
-
     </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -136,6 +135,39 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        android:background="#27347A">
+
+        <Button
+            android:id="@+id/renameButton"
+            android:layout_width="116dp"
+            android:layout_height="wrap_content"
+            android:text="rename"
+            android:fontFamily="@font/stay_happy"
+            android:textSize="25dp"
+            android:background="@drawable/button_border"
+            android:layout_gravity="left"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="57585" 
+            android:textSize="50dp"
+            android:textColor="#FFFFFFFF"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            />
+
+        <Button
+            android:id="@+id/endGameButton"
+            android:layout_width="116dp"
+            android:layout_height="wrap_content"
+            android:text="End Game"
+            android:fontFamily="@font/stay_happy"
+            android:textSize="25dp"
+            android:background="@drawable/button_border"
+            android:layout_gravity="right"/>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
