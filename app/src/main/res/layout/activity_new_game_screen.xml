@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".NewGameScreen">
 
 
@@ -26,60 +27,9 @@
         app:layout_constraintVertical_bias="0.024" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/stay_happy"
-        android:gravity="center_horizontal"
-        android:text="Players: "
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#27347A"
-        android:textSize="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.024" />
-
-    <EditText
-        android:id="@+id/playerNumberInput"
-        android:layout_width="123dp"
-        android:layout_height="64dp"
-        android:ems="10"
-        android:inputType="number"
-        android:textColor="#27347A"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.009" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="461dp"
-        android:layout_height="418dp"
-        android:fontFamily="@font/stay_happy"
-        android:gravity="center_horizontal"
-        android:text="TODO: make this text view update correctly"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#808081"
-        android:textSize="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.323"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playerNumberInput"
-        app:layout_constraintVertical_bias="0.453" />
-
-    <TextView
         android:id="@+id/textView4"
         android:layout_width="114dp"
         android:layout_height="53dp"
-        android:layout_marginTop="25dp"
         android:fontFamily="@font/stay_happy"
         android:gravity="center_horizontal"
         android:text="Play to: "
@@ -87,27 +37,284 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#27347A"
         android:textSize="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.033"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.152" />
 
     <EditText
         android:id="@+id/playToNumberInput"
-        android:layout_width="123dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="14dp"
+        android:layout_width="180dp"
+        android:layout_height="54dp"
         android:ems="10"
         android:inputType="number"
         android:textColor="#27347A"
-        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintBottom_toTopOf="@+id/doneNewGame"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/playerNumberInput"
-        app:layout_constraintVertical_bias="0.021" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <TextView
+        android:id="@+id/player1Label"
+        android:layout_width="165dp"
+        android:layout_height="52dp"
+        android:fontFamily="@font/stay_happy"
+        android:gravity="center_horizontal"
+        android:text="Player One: "
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#6A6A6A"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/player1Input"
+        android:layout_width="323dp"
+        android:layout_height="51dp"
+        android:hint="player name"
+        app:layout_constraintBottom_toTopOf="@+id/doneNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/player1Label"
+        app:layout_constraintTop_toBottomOf="@+id/playToNumberInput"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <TextView
+        android:id="@+id/player2Label"
+        android:layout_width="165dp"
+        android:layout_height="46dp"
+        android:fontFamily="@font/stay_happy"
+        android:gravity="center_horizontal"
+        android:text="Player Two: "
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#6A6A6A"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/doneNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player1Label"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/player2Input"
+        android:layout_width="323dp"
+        android:layout_height="47dp"
+        android:hint="player name"
+        app:layout_constraintBottom_toTopOf="@+id/doneNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/player2Label"
+        app:layout_constraintTop_toBottomOf="@+id/player1Input"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <TextView
+        android:id="@+id/player3Label"
+        android:layout_width="177dp"
+        android:layout_height="47dp"
+        android:fontFamily="@font/stay_happy"
+        android:gravity="center_horizontal"
+        android:text="Player Three: "
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#6A6A6A"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/doneNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player1Label"
+        app:layout_constraintVertical_bias="0.175" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/player3Input"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:hint="player name"
+        app:layout_constraintBottom_toTopOf="@+id/doneNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/player3Label"
+        app:layout_constraintTop_toBottomOf="@+id/player2Input"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <TextView
+        android:id="@+id/player4Label"
+        android:layout_width="177dp"
+        android:layout_height="47dp"
+        android:fontFamily="@font/stay_happy"
+        android:gravity="center_horizontal"
+        android:text="Player Four: "
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#6A6A6A"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/doneNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player3Label"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/player4Input"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="279dp"
+        android:hint="player name"
+        app:layout_constraintBottom_toTopOf="@+id/doneNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/player4Label"
+        app:layout_constraintTop_toBottomOf="@+id/player3Input"
+        app:layout_constraintVertical_bias="0.208" />
+
+    <TextView
+        android:id="@+id/player5Label"
+        android:layout_width="177dp"
+        android:layout_height="47dp"
+        android:fontFamily="@font/stay_happy"
+        android:gravity="center_horizontal"
+        android:text="Player Five: "
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#6A6A6A"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/doneNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player4Label"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/player5Input"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:hint="player name"
+        app:layout_constraintBottom_toTopOf="@+id/doneNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/player5Label"
+        app:layout_constraintTop_toBottomOf="@+id/player4Input"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <TextView
+        android:id="@+id/player6Label"
+        android:layout_width="177dp"
+        android:layout_height="47dp"
+        android:fontFamily="@font/stay_happy"
+        android:gravity="center_horizontal"
+        android:text="Player Six: "
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#6A6A6A"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/doneNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player5Label"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/player6Input"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:hint="player name"
+        app:layout_constraintBottom_toTopOf="@+id/doneNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/player6Label"
+        app:layout_constraintTop_toBottomOf="@+id/player5Input"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <TextView
+        android:id="@+id/player7Label"
+        android:layout_width="177dp"
+        android:layout_height="47dp"
+        android:fontFamily="@font/stay_happy"
+        android:gravity="center_horizontal"
+        android:text="Player Seven: "
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#6A6A6A"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/doneNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player6Label"
+        app:layout_constraintVertical_bias="0.087" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/player7Input"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:hint="player name"
+        app:layout_constraintBottom_toTopOf="@+id/doneNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/player7Label"
+        app:layout_constraintTop_toBottomOf="@+id/player6Input"
+        app:layout_constraintVertical_bias="0.088" />
+
+    <TextView
+        android:id="@+id/player8Label"
+        android:layout_width="177dp"
+        android:layout_height="47dp"
+        android:fontFamily="@font/stay_happy"
+        android:gravity="center_horizontal"
+        android:text="Player Eight: "
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#6A6A6A"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/doneNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player7Label"
+        app:layout_constraintVertical_bias="0.175" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/player8Input"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:hint="player name"
+        app:layout_constraintBottom_toTopOf="@+id/doneNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/player8Label"
+        app:layout_constraintTop_toBottomOf="@+id/player7Input"
+        app:layout_constraintVertical_bias="0.168" />
+
+    <TextView
+        android:id="@+id/explanation"
+        android:layout_width="520dp"
+        android:layout_height="48dp"
+        android:fontFamily="@font/stay_happy"
+        android:gravity="center_horizontal"
+        android:text="Only fill out names for the number of players you have  "
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#6A6A6A"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/doneNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player8Label"
+        app:layout_constraintVertical_bias="0.714" />
 
     <Button
         android:id="@+id/doneNewGame"
@@ -121,7 +328,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.555" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
