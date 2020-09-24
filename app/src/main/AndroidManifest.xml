@@ -10,8 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:windowSoftInputMode="adjustPan|stateHidden">
-        <activity android:name=".gameScreen"></activity>
-        <activity android:name=".NewGameScreen"></activity>
+        <activity android:name=".winScreen"></activity>
+        <activity android:name=".gameScreen" />
+        <activity android:name=".NewGameScreen" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
