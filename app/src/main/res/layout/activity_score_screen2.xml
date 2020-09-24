@@ -33,10 +33,11 @@
         android:id="@+id/newGameScoreScreen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="New Game"
         android:layout_gravity="bottom"
-        android:textSize="60dp"
         android:background="@drawable/button_border"
         android:fontFamily="@font/stay_happy"
-        android:textColor="#27347A"/>
+        android:onClick="onClickNewGameScoreScreen"
+        android:text="New Game"
+        android:textColor="#27347A"
+        android:textSize="60dp" />
 </LinearLayout>
