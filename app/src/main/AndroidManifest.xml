@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:windowSoftInputMode="adjustPan|stateHidden">
-        <activity android:name=".winScreen"></activity>
+        <activity android:name=".scoreScreen"></activity>
+        <activity android:name=".winScreen" />
         <activity android:name=".gameScreen" />
         <activity android:name=".NewGameScreen" />
         <activity android:name=".MainActivity">
