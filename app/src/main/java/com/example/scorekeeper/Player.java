@@ -1,14 +1,16 @@
 package com.example.scorekeeper;
 
-public class Player
-{
+public class Player {
     private String name;
     private int score;
 
-    public Player(String name)
-    {
+    public Player(String name) {
         this.name = name;
         this.score = 0;
     }//end constructor
 
+    public void addPoints(int add)
+    {
+        score = score + add;
+    }//end addPoints method
 }//end Player class
