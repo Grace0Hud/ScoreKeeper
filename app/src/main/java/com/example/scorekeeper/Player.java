@@ -14,8 +14,14 @@ public class Player {
         score = score + add;
     }//end addPoints method
 
-    public void resetPoints()
+    public void resetScore()
     {
         score = 0;
-    }
+    }//end resetScore
+
+    public int getScore()
+    {
+        return score;
+    }//end getScore
+
 }//end Player class
