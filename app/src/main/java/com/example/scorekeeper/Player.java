@@ -60,7 +60,7 @@ public class Player {
         return output;
     }//end rank method
 
-    //compares a list of a
+    //compares list of players and returns the largest
     private Player compareManyPlayerScores(ArrayList<Player> playerList)
     {
         Player output = playerList.get(0);
