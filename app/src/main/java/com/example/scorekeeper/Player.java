@@ -41,4 +41,17 @@ public class Player {
     {
         numPlayers = 0;
     }//end resetNumPlayers
+
+    public int getNumPlayers()
+    {
+        return numPlayers;
+    }//end getNumPlayers
+
+    public String toString()
+    {
+        String output = "Player Name: " + name;
+        output +=       "\nPlayer Score: " + score;
+        output +=       "\nTotal Number of PLayers: " + numPlayers;
+        return output;
+    }//end toString
 }//end Player class
