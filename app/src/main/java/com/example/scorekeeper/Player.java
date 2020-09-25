@@ -1,5 +1,7 @@
 package com.example.scorekeeper;
 
+import java.util.ArrayList;
+
 public class Player {
     private String name;
     private int score;
@@ -47,6 +49,43 @@ public class Player {
         return numPlayers;
     }//end getNumPlayers
 
+    public ArrayList<Player> rank(ArrayList<Player> playerList)
+    {
+        ArrayList<Player> output = new ArrayList<Player>();
+       for(int i = 0; i < playerList.size(); i++)
+       {
+          output.add(compareManyPlayerScores(playerList));
+          playerList.remove(i);
+       }//end for loop
+        return output;
+    }//end rank method
+
+    //compares a list of a
+    private Player compareManyPlayerScores(ArrayList<Player> playerList)
+    {
+        Player output = playerList.get(0);
+        for(int i = 0; i < playerList.size(); i++)
+        {
+            for(int j = i; j <playerList.size(); i++)
+            {
+               output = comparePlayerScores(playerList.get(i), playerList.get(j));
+            }//end inner for
+        }//end outer for
+        return output;
+    }//end compareManyPlayerScores method
+
+    //compares the scores of two players
+    private Player comparePlayerScores(Player firstPlayer, Player secondPlayer)
+    {
+        int first = firstPlayer.getScore();
+        int second = secondPlayer.getScore();
+
+        if(first > second)
+        {
+            return firstPlayer;
+        }
+        return secondPlayer;
+    }//end method to compare players
     public String toString()
     {
         String output = "Player Name: " + name;
