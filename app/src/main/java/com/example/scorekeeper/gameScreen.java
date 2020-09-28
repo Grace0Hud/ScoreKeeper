@@ -16,6 +16,7 @@ public class gameScreen extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_screen);
+
         String player1Name = getIntent().getStringExtra("player1Name");
         String player2Name = getIntent().getStringExtra("player2Name");
         String player3Name = getIntent().getStringExtra("player3Name");

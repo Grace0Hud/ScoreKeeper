@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -21,15 +22,16 @@ public class NewGameScreen extends AppCompatActivity {
     public void toGame(View view)
     {
         //retreiving inormation from the edit views
-        EditText player1Input = findViewById(R.id.player1Input);
-        EditText player2Input = findViewById(R.id.player2Input);
-        EditText player3Input = findViewById(R.id.player3Input);
-        EditText player4Input = findViewById(R.id.player4Input);
-        EditText player5Input = findViewById(R.id.player5Input);
-        EditText player6Input = findViewById(R.id.player6Input);
-        EditText player7Input = findViewById(R.id.player7Input);
-        EditText player8Input = findViewById(R.id.player8Input);
+        EditText player1Input = (EditText)findViewById(R.id.player1Input);
+        EditText player2Input = (EditText)findViewById(R.id.player2Input);
+        EditText player3Input = (EditText)findViewById(R.id.player3Input);
+        EditText player4Input = (EditText)findViewById(R.id.player4Input);
+        EditText player5Input = (EditText)findViewById(R.id.player5Input);
+        EditText player6Input = (EditText)findViewById(R.id.player6Input);
+        EditText player7Input = (EditText) findViewById(R.id.player7Input);
+        EditText player8Input = (EditText)findViewById(R.id.player8Input);
 
+        //creating vars
         String player1Name = "";
         String player2Name = "";
         String player3Name = "";
@@ -39,6 +41,7 @@ public class NewGameScreen extends AppCompatActivity {
         String player7Name = "";
         String player8Name = "";
 
+        //getting info from edit texts
         player1Name = player1Input.getText().toString();
         player2Name = player2Input.getText().toString();
         player3Name = player3Input.getText().toString();
@@ -50,7 +53,6 @@ public class NewGameScreen extends AppCompatActivity {
 
         //to game screen
         Intent intent = new Intent(this, gameScreen.class);
-        startActivity(intent);
 
         //passing that information to the next screen
         intent.putExtra("player1Name", player1Name);
@@ -61,6 +63,9 @@ public class NewGameScreen extends AppCompatActivity {
         intent.putExtra("player6Name", player6Name);
         intent.putExtra("player7Name", player7Name);
         intent.putExtra("player8Name", player8Name);
+
+        //starting up activity
+        startActivity(intent);
     }//end toGame
 
 }//end newGameScreen
