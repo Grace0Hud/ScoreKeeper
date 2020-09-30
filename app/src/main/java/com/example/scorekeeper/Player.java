@@ -4,11 +4,10 @@ import java.util.ArrayList;
 
 public class Player {
     private String name;
-    private int score;
+    private int score = 0;
     private static int numPlayers = 0;
     public Player(String name) {
         this.name = name;
-        this.score = 0;
         numPlayers++;
     }//end constructor
 
@@ -24,6 +23,7 @@ public class Player {
         score = 0;
     }//end resetScore
 
+    //for use in ranking methods
     public int getScore()
     {
         return score;

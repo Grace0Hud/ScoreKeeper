@@ -43,7 +43,7 @@
                 android:text = "filler text\nuser info here"
                 android:textColor="#27347A"
                 android:textSize="50dp"
-                android:fontFamily="@font/stay_happy"
+                android:fontFamily="@font/berner_basisschrift"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"/>
 
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
-                android:fontFamily="@font/stay_happy"
+                android:fontFamily="@font/berner_basisschrift"
                 android:text="filler text\nuser info here"
                 android:textColor="#27347A"
                 android:textSize="50dp" />
@@ -67,7 +67,7 @@
                 android:background="@drawable/button_border"
                 android:textColor="#27347A"
                 android:textSize="50dp"
-                android:fontFamily="@font/stay_happy"/>
+                android:fontFamily="@font/berner_basisschrift"/>
 
             <Button
                 android:id="@+id/player4Display"
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
-                android:fontFamily="@font/stay_happy"
+                android:fontFamily="@font/berner_basisschrift"
                 android:text="filler text\nuser info here"
                 android:textColor="#27347A"
                 android:textSize="50dp" />
@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
-                android:fontFamily="@font/stay_happy"
+                android:fontFamily="@font/berner_basisschrift"
                 android:text="filler text\nuser info here"
                 android:textColor="#27347A"
                 android:textSize="50dp" />
@@ -100,7 +100,7 @@
                 android:background="@drawable/button_border"
                 android:textColor="#27347A"
                 android:textSize="50dp"
-                android:fontFamily="@font/stay_happy"/>
+                android:fontFamily="@font/berner_basisschrift"/>
 
             <Button
                 android:id="@+id/player7Display"
@@ -111,7 +111,7 @@
                 android:background="@drawable/button_border"
                 android:textColor="#27347A"
                 android:textSize="50dp"
-                android:fontFamily="@font/stay_happy"/>
+                android:fontFamily="@font/berner_basisschrift"/>
 
             <Button
                 android:id="@+id/player8Display"
@@ -122,7 +122,7 @@
                 android:background="@drawable/button_border"
                 android:textColor="#27347A"
                 android:textSize="50dp"
-                android:fontFamily="@font/stay_happy"/>
+                android:fontFamily="@font/berner_basisschrift"/>
 
         </LinearLayout>
     </ScrollView>

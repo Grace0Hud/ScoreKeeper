@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -35,8 +36,9 @@ public class gameScreen extends AppCompatActivity
         Player player7 = new Player(player7Name);
         Player player8 = new Player(player8Name);
 
+       // Log.i("Info: ", "---------" + player1.getPlayerScore() + "----------");
         Button player1Button = findViewById(R.id.player1Display);
-        player1Button.setText(player1.getPlayerName() + ": " + player1.getScore());
+        player1Button.setText(player1.getPlayerName() + ": \n" + player1.getScore());
         Button player2Button = findViewById(R.id.player2Display);
         player2Button.setText(player2.getPlayerName() + ": " + player2.getScore());
         Button player3Button = findViewById(R.id.player3Display);
