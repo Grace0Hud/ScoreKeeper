@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 public class gameScreen extends AppCompatActivity
 {
 
@@ -37,23 +39,69 @@ public class gameScreen extends AppCompatActivity
         Player player8 = new Player(player8Name);
 
        // Log.i("Info: ", "---------" + player1.getPlayerScore() + "----------");
+
+        //adding the players to an array list of players.
+        ArrayList<Player> players = new ArrayList<>();
+        players.add(player1);
+        players.add(player2);
+        players.add(player3);
+        players.add(player4);
+        players.add(player5);
+        players.add(player6);
+        players.add(player7);
+        players.add(player8);
+
+        //playerButton arrayList
+        ArrayList<Button> playerButtons = new ArrayList<>();
+
+        //linking button objects to button resources
         Button player1Button = findViewById(R.id.player1Display);
-        player1Button.setText(player1.getPlayerName() + ": \n" + player1.getScore());
         Button player2Button = findViewById(R.id.player2Display);
-        player2Button.setText(player2.getPlayerName() + ": " + player2.getScore());
         Button player3Button = findViewById(R.id.player3Display);
-        player3Button.setText(player3.getPlayerName() + ": " + player3.getScore());
         Button player4Button = findViewById(R.id.player4Display);
-        player4Button.setText(player4.getPlayerName() + ": " + player4.getScore());
         Button player5Button = findViewById(R.id.player5Display);
-        player5Button.setText(player5.getPlayerName() + ": " + player5.getScore());
         Button player6Button = findViewById(R.id.player6Display);
-        player6Button.setText(player6.getPlayerName() + ": " + player6.getScore());
         Button player7Button = findViewById(R.id.player7Display);
-        player7Button.setText(player7.getPlayerName() + ": " + player7.getScore());
         Button player8Button = findViewById(R.id.player8Display);
+
+        //adding playerbuttons to array list
+        playerButtons.add(player1Button);
+        playerButtons.add(player2Button);
+        playerButtons.add(player3Button);
+        playerButtons.add(player4Button);
+        playerButtons.add(player5Button);
+        playerButtons.add(player6Button);
+        playerButtons.add(player7Button);
+        playerButtons.add(player8Button);
+
+        //checking if a player name has been entered for the player object
+        //if not, then the player button is set to invisible.
+        //space cannot be occupied by other widgets but it won't be seen or presable by users
+        for(int i = 0; i< players.size(); i++)
+        {
+            if(players.get(i).getPlayerName().equals(""))
+            {
+                playerButtons.get(i).setVisibility(View.INVISIBLE);
+            }
+            else
+            {
+                playerButtons.get(i).setText(players.get(i).getPlayerName() + ": " + players.get(i).getScore());
+            }
+        }//end for loop
+
+        /*
+        player1Button.setText(player1.getPlayerName() + ": \n" + player1.getScore());
+        player2Button.setText(player2.getPlayerName() + ": " + player2.getScore());
+        player3Button.setText(player3.getPlayerName() + ": " + player3.getScore());
+        player4Button.setText(player4.getPlayerName() + ": " + player4.getScore());
+        player5Button.setText(player5.getPlayerName() + ": " + player5.getScore());
+        player6Button.setText(player6.getPlayerName() + ": " + player6.getScore());
+        player7Button.setText(player7.getPlayerName() + ": " + player7.getScore());
         player8Button.setText(player8.getPlayerName() + ": " + player8.getScore());
-    }
+        */
+
+
+    }//end on create
 
     public void onClickEndGame(View view)
     {
