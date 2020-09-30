@@ -160,6 +160,11 @@ public class gameScreen extends AppCompatActivity
         startActivity(intent);
     }//end onClickEndGame
 
+    public void onClickMinus10(View view)
+    {
+        playerToggle(clickedButton, -10);
+    }//end minus 10 onC
+
     private void playerToggle(int player, int num)
     {
         String player1Name = getIntent().getStringExtra("player1Name");
@@ -216,19 +221,35 @@ public class gameScreen extends AppCompatActivity
         playerButtons.add(player7Button);
         playerButtons.add(player8Button);
 
-        //checking if a player name has been entered for the player object
-        //if not, then the player button is set to invisible.
-        //space cannot be occupied by other widgets but it won't be seen or presable by users
-        for(int i = 0; i< players.size(); i++)
+        if(player == 0)
         {
-            if(players.get(i).getPlayerName().equals(""))
+            //checking if a player name has been entered for the player object
+            //if not, then the player button is set to invisible.
+            //space cannot be occupied by other widgets but it won't be seen or presable by users
+            for(int i = 0; i< players.size(); i++)
             {
-                playerButtons.get(i).setVisibility(View.INVISIBLE);
-            }
-            else
+                if(players.get(i).getPlayerName().equals(""))
+                {
+                    playerButtons.get(i).setVisibility(View.INVISIBLE);
+                }
+                else
+                {
+                    playerButtons.get(i).setText(players.get(i).getPlayerName() + ": " + players.get(i).getScore());
+                }
+            }//end for loop
+        }//end set up validation
+
+        //checks which player is selected
+        //then adds the number of points specified
+        //then updates textview
+        for(int i = 0; i < players.size(); i++)
+        {
+            if(i == (player-1))
             {
+                players.get(i).addPoints(num);
                 playerButtons.get(i).setText(players.get(i).getPlayerName() + ": " + players.get(i).getScore());
-            }
-        }//end for loop
-    }
+            }//end if validating which player
+        }//end for cycling through player and button arrays
+
+    }//end toggle buttons method
 }//end gameScreen
