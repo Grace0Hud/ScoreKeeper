@@ -40,12 +40,13 @@
                 android:id="@+id/player1Display"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text = "filler text\nuser info here"
-                android:textColor="#27347A"
-                android:textSize="50dp"
-                android:fontFamily="@font/berner_basisschrift"
                 android:layout_marginBottom="15dp"
-                android:background="@drawable/button_border"/>
+                android:background="@drawable/button_border"
+                android:fontFamily="@font/berner_basisschrift"
+                android:onClick="onClickPlayer1Button"
+                android:text="filler text\nuser info here"
+                android:textColor="#27347A"
+                android:textSize="50dp" />
 
             <Button
                 android:id="@+id/player2Display"
@@ -54,6 +55,7 @@
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
                 android:fontFamily="@font/berner_basisschrift"
+                android:onClick="onClickPlayer2Button"
                 android:text="filler text\nuser info here"
                 android:textColor="#27347A"
                 android:textSize="50dp" />
@@ -62,12 +64,13 @@
                 android:id="@+id/player3Display"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text = "filler text\nuser info here"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
+                android:fontFamily="@font/berner_basisschrift"
+                android:onClick="onClickPlayer3Button"
+                android:text="filler text\nuser info here"
                 android:textColor="#27347A"
-                android:textSize="50dp"
-                android:fontFamily="@font/berner_basisschrift"/>
+                android:textSize="50dp" />
 
             <Button
                 android:id="@+id/player4Display"
@@ -76,6 +79,7 @@
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
                 android:fontFamily="@font/berner_basisschrift"
+                android:onClick="onClickPlayer4Button"
                 android:text="filler text\nuser info here"
                 android:textColor="#27347A"
                 android:textSize="50dp" />
@@ -89,7 +93,8 @@
                 android:fontFamily="@font/berner_basisschrift"
                 android:text="filler text\nuser info here"
                 android:textColor="#27347A"
-                android:textSize="50dp" />
+                android:textSize="50dp"
+                android:onClick="onClickPlayer5Button"/>
 
             <Button
                 android:id="@+id/player6Display"
@@ -100,7 +105,8 @@
                 android:background="@drawable/button_border"
                 android:textColor="#27347A"
                 android:textSize="50dp"
-                android:fontFamily="@font/berner_basisschrift"/>
+                android:fontFamily="@font/berner_basisschrift"
+                android:onClick="onClickPlayer6Button"/>
 
             <Button
                 android:id="@+id/player7Display"
@@ -111,7 +117,8 @@
                 android:background="@drawable/button_border"
                 android:textColor="#27347A"
                 android:textSize="50dp"
-                android:fontFamily="@font/berner_basisschrift"/>
+                android:fontFamily="@font/berner_basisschrift"
+                android:onClick="onClickPlayer7Button"/>
 
             <Button
                 android:id="@+id/player8Display"
@@ -122,7 +129,8 @@
                 android:background="@drawable/button_border"
                 android:textColor="#27347A"
                 android:textSize="50dp"
-                android:fontFamily="@font/berner_basisschrift"/>
+                android:fontFamily="@font/berner_basisschrift"
+                android:onClick="onClickPlayer8Button"/>
 
         </LinearLayout>
     </ScrollView>
