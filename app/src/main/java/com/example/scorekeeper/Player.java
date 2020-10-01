@@ -1,20 +1,25 @@
 package com.example.scorekeeper;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 
 public class Player {
     private String name;
-    private int score = 0;
+    private int score;
     private static int numPlayers = 0;
     public Player(String name) {
         this.name = name;
+        score = 0;
         numPlayers++;
+        //Log.i("addPoints/amt Players: " ,"------- " + numPlayers + "--------");
     }//end constructor
 
     //method will add certain amount of points depending on button pressed
     public void addPoints(int add)
     {
-        score = score + add;
+        score += add;
+
     }//end addPoints method
 
     //sets score back to 0
@@ -44,7 +49,7 @@ public class Player {
         numPlayers = 0;
     }//end resetNumPlayers
 
-    public int getNumPlayers()
+    public static int getNumPlayers()
     {
         return numPlayers;
     }//end getNumPlayers

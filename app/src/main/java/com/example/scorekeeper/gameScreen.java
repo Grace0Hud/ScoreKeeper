@@ -14,14 +14,75 @@ import java.util.ArrayList;
 public class gameScreen extends AppCompatActivity
 {
 
+
     private int clickedButton;
+
+    ArrayList<Player> players = new ArrayList<>();
+    ArrayList<Button> playerButtons = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_screen);
 
+
+        String player1Name = getIntent().getStringExtra("player1Name");
+        String player2Name = getIntent().getStringExtra("player2Name");
+        String player3Name = getIntent().getStringExtra("player3Name");
+        String player4Name = getIntent().getStringExtra("player4Name");
+        String player5Name = getIntent().getStringExtra("player5Name");
+        String player6Name = getIntent().getStringExtra("player6Name");
+        String player7Name = getIntent().getStringExtra("player7Name");
+        String player8Name = getIntent().getStringExtra("player8Name");
+
+        Player player1 = new Player(player1Name);
+        Player player2 = new Player(player2Name);
+        Player player3 = new Player(player3Name);
+        Player player4 = new Player(player4Name);
+        Player player5 = new Player(player5Name);
+        Player player6 = new Player(player6Name);
+        Player player7 = new Player(player7Name);
+        Player player8 = new Player(player8Name);
+
+        // Log.i("Info: ", "---------" + player1.getPlayerScore() + "----------");
+
+        //adding the players to an array list of players.
+
+        players.add(player1);
+        players.add(player2);
+        players.add(player3);
+        players.add(player4);
+        players.add(player5);
+        players.add(player6);
+        players.add(player7);
+        players.add(player8);
+
+        //playerButton arrayList
+
+
+        //linking button objects to button resources
+        Button player1Button = findViewById(R.id.player1Display);
+        Button player2Button = findViewById(R.id.player2Display);
+        Button player3Button = findViewById(R.id.player3Display);
+        Button player4Button = findViewById(R.id.player4Display);
+        Button player5Button = findViewById(R.id.player5Display);
+        Button player6Button = findViewById(R.id.player6Display);
+        Button player7Button = findViewById(R.id.player7Display);
+        Button player8Button = findViewById(R.id.player8Display);
+
+        //adding playerbuttons to array list
+        playerButtons.add(player1Button);
+        playerButtons.add(player2Button);
+        playerButtons.add(player3Button);
+        playerButtons.add(player4Button);
+        playerButtons.add(player5Button);
+        playerButtons.add(player6Button);
+        playerButtons.add(player7Button);
+        playerButtons.add(player8Button);
+
         playerToggle(clickedButton, 0);
+
 
         /*
 
@@ -163,64 +224,34 @@ public class gameScreen extends AppCompatActivity
     public void onClickMinus10(View view)
     {
         playerToggle(clickedButton, -10);
-    }//end minus 10 onC
+    }//end minus 10 onClick
 
+    public void onClickMinus5(View view)
+    {
+        playerToggle(clickedButton, -5);
+    }//end minus 10 onClick
+
+    public void onClickMinus1(View view)
+    {
+        playerToggle(clickedButton, -1);
+    }//end minus 1 onClick
+
+    public void onClickAdd1(View view)
+    {
+        playerToggle(clickedButton, 1);
+    }//end add 1 onClick
+
+    public void onClickAdd5(View view)
+    {
+        playerToggle(clickedButton, 5);
+    }//end add 5 onClick
+
+    public void onClickAdd10(View view)
+    {
+        playerToggle(clickedButton, 10);
+    }//end add 10 onClick
     private void playerToggle(int player, int num)
     {
-        String player1Name = getIntent().getStringExtra("player1Name");
-        String player2Name = getIntent().getStringExtra("player2Name");
-        String player3Name = getIntent().getStringExtra("player3Name");
-        String player4Name = getIntent().getStringExtra("player4Name");
-        String player5Name = getIntent().getStringExtra("player5Name");
-        String player6Name = getIntent().getStringExtra("player6Name");
-        String player7Name = getIntent().getStringExtra("player7Name");
-        String player8Name = getIntent().getStringExtra("player8Name");
-
-        Player player1 = new Player(player1Name);
-        Player player2 = new Player(player2Name);
-        Player player3 = new Player(player3Name);
-        Player player4 = new Player(player4Name);
-        Player player5 = new Player(player5Name);
-        Player player6 = new Player(player6Name);
-        Player player7 = new Player(player7Name);
-        Player player8 = new Player(player8Name);
-
-        // Log.i("Info: ", "---------" + player1.getPlayerScore() + "----------");
-
-        //adding the players to an array list of players.
-        ArrayList<Player> players = new ArrayList<>();
-        players.add(player1);
-        players.add(player2);
-        players.add(player3);
-        players.add(player4);
-        players.add(player5);
-        players.add(player6);
-        players.add(player7);
-        players.add(player8);
-
-        //playerButton arrayList
-        ArrayList<Button> playerButtons = new ArrayList<>();
-
-        //linking button objects to button resources
-        Button player1Button = findViewById(R.id.player1Display);
-        Button player2Button = findViewById(R.id.player2Display);
-        Button player3Button = findViewById(R.id.player3Display);
-        Button player4Button = findViewById(R.id.player4Display);
-        Button player5Button = findViewById(R.id.player5Display);
-        Button player6Button = findViewById(R.id.player6Display);
-        Button player7Button = findViewById(R.id.player7Display);
-        Button player8Button = findViewById(R.id.player8Display);
-
-        //adding playerbuttons to array list
-        playerButtons.add(player1Button);
-        playerButtons.add(player2Button);
-        playerButtons.add(player3Button);
-        playerButtons.add(player4Button);
-        playerButtons.add(player5Button);
-        playerButtons.add(player6Button);
-        playerButtons.add(player7Button);
-        playerButtons.add(player8Button);
-
         if(player == 0)
         {
             //checking if a player name has been entered for the player object
@@ -242,11 +273,14 @@ public class gameScreen extends AppCompatActivity
         //checks which player is selected
         //then adds the number of points specified
         //then updates textview
+       // Log.i("NumPlayers/1: ", "------- " + Player.getNumPlayers() + "--------");
         for(int i = 0; i < players.size(); i++)
         {
             if(i == (player-1))
             {
+               // Log.i("NumPlayers/2: ", "------- " + Player.getNumPlayers() + "--------");
                 players.get(i).addPoints(num);
+               // Log.i("NumPlayers/3: ", "------- " + Player.getNumPlayers() + "--------");
                 playerButtons.get(i).setText(players.get(i).getPlayerName() + ": " + players.get(i).getScore());
             }//end if validating which player
         }//end for cycling through player and button arrays

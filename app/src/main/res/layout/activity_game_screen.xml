@@ -208,7 +208,8 @@
                 android:text="-5"
                 android:textColor="#FFFFFF"
                 android:textSize="30dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onClickMinus5"/>
 
             <Button
                 android:id="@+id/minus1"
@@ -220,7 +221,8 @@
                 android:text="-1"
                 android:textColor="#FFFFFF"
                 android:textSize="30dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onClickMinus1"/>
 
             <Space
                 android:layout_width="wrap_content"
@@ -237,7 +239,8 @@
                 android:text="+1"
                 android:textColor="#FFFFFF"
                 android:textSize="30dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onClickAdd1"/>
 
             <Button
                 android:id="@+id/plus5"
@@ -249,7 +252,8 @@
                 android:text="+5"
                 android:textColor="#FFFFFF"
                 android:textSize="30dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onClickAdd5"/>
 
             <Button
                 android:id="@+id/plus10"
@@ -259,10 +263,11 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="30dp"
                 android:background="@drawable/nav_button_styles"
-                android:text="+1"
+                android:text="+10"
                 android:textColor="#FFFFFF"
                 android:textSize="30dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:onClick="onClickAdd10"/>
         </LinearLayout>
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
