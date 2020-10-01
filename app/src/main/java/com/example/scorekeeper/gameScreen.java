@@ -173,6 +173,14 @@ public class gameScreen extends AppCompatActivity
 
     }//end on create
 
+    public void onClickEndGame(View view)
+    {
+        Intent intent = new Intent(this, winScreen.class);
+
+        startActivity(intent);
+    }//end onClickEndGame
+
+    //when player buttons are clicked
     public void onClickPlayer1Button(View view)
     {
         clickedButton = 1;
@@ -217,11 +225,8 @@ public class gameScreen extends AppCompatActivity
         //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 8th player on click
 
-    public void onClickEndGame(View view)
-    {
-        Intent intent = new Intent(this, winScreen.class);
-        startActivity(intent);
-    }//end onClickEndGame
+
+    //+/- button onCLicks
 
     public void onClickMinus10(View view)
     {

@@ -53,28 +53,20 @@ public class Player {
     {
         return numPlayers;
     }//end getNumPlayers
-
+    
+    //compares list of players and returns the largest
     public ArrayList<Player> rank(ArrayList<Player> playerList)
     {
+        Player indivPlayer = playerList.get(0);
         ArrayList<Player> output = new ArrayList<Player>();
-       for(int i = 0; i < playerList.size(); i++)
-       {
-          output.add(compareManyPlayerScores(playerList));
-          playerList.remove(i);
-       }//end for loop
-        return output;
-    }//end rank method
-
-    //compares list of players and returns the largest
-    private Player compareManyPlayerScores(ArrayList<Player> playerList)
-    {
-        Player output = playerList.get(0);
         for(int i = 0; i < playerList.size(); i++)
         {
             for(int j = i; j <playerList.size(); i++)
             {
-               output = comparePlayerScores(playerList.get(i), playerList.get(j));
+               indivPlayer = comparePlayerScores(playerList.get(i), playerList.get(j));
             }//end inner for
+            output.add(indivPlayer);
+            playerList.remove(i);
         }//end outer for
         return output;
     }//end compareManyPlayerScores method
