@@ -278,6 +278,7 @@ public class gameScreen extends AppCompatActivity
         //then adds the number of points specified
         //then updates textview
        // Log.i("NumPlayers/1: ", "------- " + Player.getNumPlayers() + "--------");
+
         for(int i = 0; i < players.size(); i++)
         {
             if(i == (player-1))
@@ -286,6 +287,16 @@ public class gameScreen extends AppCompatActivity
                 players.get(i).addPoints(num);
                // Log.i("NumPlayers/3: ", "------- " + Player.getNumPlayers() + "--------");
                 playerButtons.get(i).setText(players.get(i).getPlayerName() + ": " + players.get(i).getScore());
+
+                //if a point limit has been set
+                //and the player is above the point limit
+                //that player wins
+                if((pointLimit > 0) && (players.get(i).getScore() >= pointLimit))
+                {
+                    Intent intent = new Intent(this, winScreen.class);
+                    intent.putExtra("winner", players.get(i).getPlayerName());
+                    startActivity(intent);
+                }//end if win
             }//end if validating which player
         }//end for cycling through player and button arrays
     }//end toggle buttons method
