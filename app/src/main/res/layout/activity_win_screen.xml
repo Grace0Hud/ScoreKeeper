@@ -9,21 +9,21 @@
 
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/winnerDisplay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:fontFamily="@font/admiration_pains_font"
-        android:text="Player Name Wins"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="100dp"
         android:shadowColor="#000000"
         android:shadowDx="1.5"
         android:shadowDy="1.3"
         android:shadowRadius="8"
+        android:text="Player Name Wins"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -35,17 +35,18 @@
         android:id="@+id/newGameButtonWinScreen"
         android:layout_width="163dp"
         android:layout_height="85dp"
+        android:layout_marginTop="158dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/button_border"
         android:fontFamily="@font/stay_happy"
+        android:onClick="onNewGameClick"
         android:text="New Game"
         android:textSize="40dp"
-        android:onClick="onNewGameClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/winnerDisplay"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -60,8 +61,8 @@
         android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toEndOf="@+id/newGameButtonWinScreen"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/winnerDisplay"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
