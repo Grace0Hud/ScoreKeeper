@@ -30,6 +30,7 @@ public class NewGameScreen extends AppCompatActivity {
         EditText player6Input = (EditText)findViewById(R.id.player6Input);
         EditText player7Input = (EditText) findViewById(R.id.player7Input);
         EditText player8Input = (EditText)findViewById(R.id.player8Input);
+        EditText playToET = findViewById(R.id.playToNumberInput);
 
         //creating vars
         String player1Name = "";
@@ -51,6 +52,22 @@ public class NewGameScreen extends AppCompatActivity {
         player7Name = player7Input.getText().toString();
         player8Name = player8Input.getText().toString();
 
+        //getting playTo value
+        String num = playToET.getText().toString();
+        int playTo;
+        //checking if num has nothing in it
+        //-1 means that there is no limit
+        //in that case the game will continue until "end game" is pressed
+        if(num.equals(""))
+        {
+            playTo = -1;
+        }
+        else
+        {
+            playTo = Integer.parseInt(num);
+        }
+
+
         //to game screen
         Intent intent = new Intent(this, gameScreen.class);
 
@@ -63,6 +80,7 @@ public class NewGameScreen extends AppCompatActivity {
         intent.putExtra("player6Name", player6Name);
         intent.putExtra("player7Name", player7Name);
         intent.putExtra("player8Name", player8Name);
+        intent.putExtra("playTo", playTo);
 
         //starting up activity
         startActivity(intent);

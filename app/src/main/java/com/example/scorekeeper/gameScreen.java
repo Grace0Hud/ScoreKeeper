@@ -19,6 +19,7 @@ public class gameScreen extends AppCompatActivity
 
     ArrayList<Player> players = new ArrayList<>();
     ArrayList<Button> playerButtons = new ArrayList<>();
+    int pointLimit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -35,6 +36,9 @@ public class gameScreen extends AppCompatActivity
         String player6Name = getIntent().getStringExtra("player6Name");
         String player7Name = getIntent().getStringExtra("player7Name");
         String player8Name = getIntent().getStringExtra("player8Name");
+
+        //retrieving playTo information
+        pointLimit = getIntent().getIntExtra("playTo", -1);
 
         Player player1 = new Player(player1Name);
         Player player2 = new Player(player2Name);
@@ -57,8 +61,6 @@ public class gameScreen extends AppCompatActivity
         players.add(player6);
         players.add(player7);
         players.add(player8);
-
-        //playerButton arrayList
 
 
         //linking button objects to button resources
@@ -174,45 +176,45 @@ public class gameScreen extends AppCompatActivity
     public void onClickPlayer1Button(View view)
     {
         clickedButton = 1;
-        Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end first player on click
 
     public void onClickPlayer2Button(View view)
     {
         clickedButton = 2;
-        Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
+       // Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 2nd player on click
 
     public void onClickPlayer3Button(View view)
     {
         clickedButton = 3;
-        Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 3rd player on click
 
     public void onClickPlayer4Button(View view)
     {
         clickedButton = 4;
-        Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
+       // Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 4th player on click
     public void onClickPlayer5Button(View view)
     {
         clickedButton = 5;
-        Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 5th player on click
     public void onClickPlayer6Button(View view)
     {
         clickedButton = 6;
-        Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 6th player on click
     public void onClickPlayer7Button(View view)
     {
         clickedButton = 7;
-        Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 7th player on click
     public void onClickPlayer8Button(View view)
     {
         clickedButton = 8;
-        Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 8th player on click
 
     public void onClickEndGame(View view)
@@ -250,6 +252,8 @@ public class gameScreen extends AppCompatActivity
     {
         playerToggle(clickedButton, 10);
     }//end add 10 onClick
+
+
     private void playerToggle(int player, int num)
     {
         if(player == 0)
@@ -284,6 +288,6 @@ public class gameScreen extends AppCompatActivity
                 playerButtons.get(i).setText(players.get(i).getPlayerName() + ": " + players.get(i).getScore());
             }//end if validating which player
         }//end for cycling through player and button arrays
-
     }//end toggle buttons method
+
 }//end gameScreen
