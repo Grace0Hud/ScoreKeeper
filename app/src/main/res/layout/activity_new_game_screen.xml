@@ -56,7 +56,7 @@
             <EditText
                 android:id="@+id/playToNumberInput"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="2dp"
@@ -140,7 +140,7 @@
             <TextView
                 android:id="@+id/player4Label"
                 android:layout_width="match_parent"
-                android:layout_height="47dp"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="@string/player_4"
                 android:textAlignment="center"
@@ -186,7 +186,7 @@
             <TextView
                 android:id="@+id/player6Label"
                 android:layout_width="match_parent"
-                android:layout_height="47dp"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="@string/player_6"
                 android:textAlignment="center"
@@ -232,7 +232,7 @@
             <TextView
                 android:id="@+id/player8Label"
                 android:layout_width="match_parent"
-                android:layout_height="47dp"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="@string/player_8"
                 android:textAlignment="center"
@@ -256,7 +256,7 @@
             <Button
                 android:id="@+id/doneNewGame"
                 android:layout_width="match_parent"
-                android:layout_height="89dp"
+                android:layout_height="wrap_content"
                 android:background="@color/navy"
                 android:fontFamily="@font/stay_happy"
                 android:onClick="toGame"

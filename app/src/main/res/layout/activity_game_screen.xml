@@ -124,6 +124,7 @@
     </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id = "@+id/navBar"
         android:layout_width="match_parent"
         android:layout_height="170dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -134,131 +135,142 @@
         app:layout_constraintVertical_bias="1.0"
         android:background="@color/navy">
 
-        <Button
-            android:id="@+id/renameButton"
-            android:layout_width="116dp"
-            android:layout_height="wrap_content"
-            android:text="@string/rename_button"
-            android:fontFamily="@font/stay_happy"
-            android:textSize="25sp"
-            android:background="@drawable/button_border"
-            android:layout_gravity="start"/>
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="57585"
-            android:textSize="70sp"
-            android:textColor="#FFFFFFFF"
-            android:layout_gravity="center_horizontal"
-            android:textAlignment="center"
-            />
-
-        <Button
-            android:id="@+id/endGameButton"
-            android:layout_width="116dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:background="@drawable/button_border"
-            android:fontFamily="@font/stay_happy"
-            android:onClick="onClickEndGame"
-            android:text="@string/end_game_button"
-            android:textSize="25sp" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_gravity="bottom">
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/minus10"
-                android:layout_width="60dp"
+            <LinearLayout
+                android:id="@+id/navButtonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="top"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/renameButton"
+                    android:layout_width="116dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="@drawable/button_border"
+                    android:fontFamily="@font/stay_happy"
+                    android:text="@string/rename_button"
+                    android:textSize="25sp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="57585"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="70sp"
+                    android:layout_weight="2"/>
+
+                <Button
+                    android:id="@+id/endGameButton"
+                    android:layout_width="116dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@drawable/button_border"
+                    android:fontFamily="@font/stay_happy"
+                    android:onClick="onClickEndGame"
+                    android:text="@string/end_game_button"
+                    android:textSize="25sp"
+                    android:layout_weight="1"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addButtonsBar"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginBottom="30dp"
-                android:background="@drawable/nav_button_styles"
-                android:text="-10"
-                android:textColor="#FFFFFF"
-                android:layout_weight="1"
-                android:onClick="onClickMinus10"/>
+                android:layout_marginBottom="5dp"
+                android:layout_weight="10"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/minus5"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="30dp"
-                android:background="@drawable/nav_button_styles"
-                android:text="-5"
-                android:textColor="#FFFFFF"
-                android:layout_weight="1"
-                android:onClick="onClickMinus5"/>
+                <Button
+                    android:id="@+id/minus10"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/nav_button_styles"
+                    android:onClick="onClickMinus10"
+                    android:text="-10"
+                    android:textColor="#FFFFFF" />
 
-            <Button
-                android:id="@+id/minus1"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="30dp"
-                android:background="@drawable/nav_button_styles"
-                android:text="-1"
-                android:textColor="#FFFFFF"
-                android:layout_weight="1"
-                android:onClick="onClickMinus1"
-                />
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                />
+                <Button
+                    android:id="@+id/minus5"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@drawable/nav_button_styles"
+                    android:onClick="onClickMinus5"
+                    android:text="-5"
+                    android:textColor="#FFFFFF" />
 
-            <Button
-                android:id="@+id/plus1"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="30dp"
-                android:background="@drawable/nav_button_styles"
-                android:text="+1"
-                android:textColor="#FFFFFF"
-                android:layout_weight="1"
-                android:onClick="onClickAdd1"/>
+                <Button
+                    android:id="@+id/minus1"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@drawable/nav_button_styles"
+                    android:onClick="onClickMinus1"
+                    android:text="-1"
+                    android:textColor="#FFFFFF" />
 
-            <Button
-                android:id="@+id/plus5"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="30dp"
-                android:background="@drawable/nav_button_styles"
-                android:text="+5"
-                android:textColor="#FFFFFF"
-                android:layout_weight="1"
-                android:onClick="onClickAdd5"/>
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5" />
 
-            <Button
-                android:id="@+id/plus10"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginEnd="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="30dp"
-                android:background="@drawable/nav_button_styles"
-                android:text="+10"
-                android:textColor="#FFFFFF"
-                android:layout_weight="1"
-                android:onClick="onClickAdd10"/>
+                <Button
+                    android:id="@+id/plus1"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@drawable/nav_button_styles"
+                    android:onClick="onClickAdd1"
+                    android:text="+1"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/plus5"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@drawable/nav_button_styles"
+                    android:onClick="onClickAdd5"
+                    android:text="+5"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/plus10"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/nav_button_styles"
+                    android:onClick="onClickAdd10"
+                    android:text="+10"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
         </LinearLayout>
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>

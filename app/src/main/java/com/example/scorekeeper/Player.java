@@ -59,6 +59,7 @@ public class Player implements Parcelable {
     //compares list of players and returns the largest
     public static ArrayList<Player> rank(ArrayList<Player> playerList)
     {
+        Log.i("RankedPlayer", "------start of method-------");
         Player indivPlayer = playerList.get(0);
         ArrayList<Player> output = new ArrayList<Player>();
         Log.i("RankedPlayer", "------before for loop-------");
