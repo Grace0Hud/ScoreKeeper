@@ -24,35 +24,34 @@
                 android:layout_height="87dp"
                 android:fontFamily="@font/admiration_pains_font"
                 android:gravity="center_horizontal"
-                android:text="New Game"
+                android:text="@string/new_game_button"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="@color/navy"
-                android:textSize="50dp" />
+                android:textSize="50sp" />
 
             <TextView
                 android:id="@+id/explanation"
-                android:layout_width="520dp"
-                android:layout_height="48dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/stay_happy"
                 android:gravity="center_horizontal"
-                android:text="Only fill out names for the number of players you have  "
+                android:text="@string/explanation_new_game"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#6A6A6A"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/stay_happy"
                 android:gravity="center_horizontal"
-                android:text="Play to: "
+                android:text="@string/play_to"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="@color/navy"
-                android:textSize="35dp" />
+                 />
 
             <EditText
                 android:id="@+id/playToNumberInput"
@@ -63,83 +62,76 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="#1B6A6A6A"
+                android:background="@color/light_grey"
                 android:ems="10"
-                android:hint="Point cap"
+                android:hint="@string/point_cap"
                 android:inputType="number"
                 android:textAlignment="center"
-                android:textColor="#27347A" />
+                android:textColor="#27347A"
+                android:autofillHints="250" />
 
             <TextView
                 android:id="@+id/player1Label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/stay_happy"
                 android:gravity="center_horizontal"
-                android:text="Player One: "
+                android:text="@string/player_1"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#6A6A6A"
-                android:textSize="30dp" />
+                android:textColor="@color/navy"
+                />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/player1Input"
                 android:layout_width="match_parent"
-                android:hint="player name"
-                android:textSize = "20dp"
-                android:background="#1B6A6A6A"
-                android:textColor="#27347A"
-                android:layout_height="40dp"
-                android:textAlignment="center"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft = "10dp"
-                android:layout_marginRight="10dp"/>
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#1B6A6A6A"
+                android:hint="@string/player_name_hint"
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/player2Label"
                 android:layout_width="match_parent"
-                android:layout_height="46dp"
-                android:fontFamily="@font/stay_happy"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Player Two: "
+                android:text="@string/player_2"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#6A6A6A"
-                android:textSize="30dp" />
+                android:textColor="@color/navy"/>
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/player2Input"
                 android:layout_width="match_parent"
-                android:hint="player name"
-                android:textSize = "20dp"
-                android:background="#1B6A6A6A"
-                android:textColor="#27347A"
-                android:layout_height="40dp"
-                android:textAlignment="center"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft = "10dp"
-                android:layout_marginRight="10dp"/>
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/light_grey"
+                android:hint="@string/player_name_hint"
+                android:textAlignment="center"
+                android:textColor="#27347A" />
 
             <TextView
                 android:id="@+id/player3Label"
                 android:layout_width="match_parent"
-                android:layout_height="47dp"
-                android:fontFamily="@font/stay_happy"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Player Three:"
+                android:text="@string/player_3"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#6A6A6A"
-                android:textSize="30dp" />
+                android:textColor="@color/navy"
+                />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/player3Input"
                 android:layout_width="match_parent"
-                android:hint="player name"
-                android:textSize = "20dp"
-                android:background="#1B6A6A6A"
+                android:hint="@string/player_name_hint"
+                android:background="@color/light_grey"
                 android:textColor="#27347A"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft = "10dp"
@@ -149,47 +141,43 @@
                 android:id="@+id/player4Label"
                 android:layout_width="match_parent"
                 android:layout_height="47dp"
-                android:fontFamily="@font/stay_happy"
                 android:gravity="center_horizontal"
-                android:text="Player Four: "
+                android:text="@string/player_4"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#6A6A6A"
-                android:textSize="30dp" />
+                android:textColor="@color/navy"
+                />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/player4Input"
                 android:layout_width="match_parent"
-                android:hint="player name"
-                android:textSize = "20dp"
-                android:background="#1B6A6A6A"
-                android:textColor="#27347A"
-                android:layout_height="40dp"
-                android:textAlignment="center"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft = "10dp"
-                android:layout_marginRight="10dp"/>
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/light_grey"
+                android:hint="@string/player_name_hint"
+                android:textAlignment="center"
+                android:textColor="#27347A" />
 
             <TextView
                 android:id="@+id/player5Label"
                 android:layout_width="match_parent"
-                android:layout_height="47dp"
-                android:fontFamily="@font/stay_happy"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Player Five: "
+                android:text="@string/player_5"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#6A6A6A"
-                android:textSize="30dp" />
+                android:textColor="@color/navy"
+                />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/player5Input"
                 android:layout_width="match_parent"
-                android:hint="player name"
-                android:textSize = "20dp"
-                android:background="#1B6A6A6A"
+                android:hint="@string/player_name_hint"
+                android:background="@color/light_grey"
                 android:textColor="#27347A"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft = "10dp"
@@ -199,22 +187,20 @@
                 android:id="@+id/player6Label"
                 android:layout_width="match_parent"
                 android:layout_height="47dp"
-                android:fontFamily="@font/stay_happy"
                 android:gravity="center_horizontal"
-                android:text="Player Six: "
+                android:text="@string/player_6"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#6A6A6A"
-                android:textSize="30dp" />
+                android:textColor="@color/navy"
+                />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/player6Input"
                 android:layout_width="match_parent"
-                android:hint="player name"
-                android:textSize = "20dp"
-                android:background="#1B6A6A6A"
+                android:hint="@string/player_name_hint"
+                android:background="@color/light_grey"
                 android:textColor="#27347A"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft = "10dp"
@@ -223,23 +209,21 @@
             <TextView
                 android:id="@+id/player7Label"
                 android:layout_width="match_parent"
-                android:layout_height="47dp"
-                android:fontFamily="@font/stay_happy"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Player Seven: "
+                android:text="@string/player_7"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#6A6A6A"
-                android:textSize="30dp" />
+                android:textColor="@color/navy"
+               />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/player7Input"
                 android:layout_width="match_parent"
-                android:hint="player name"
-                android:textSize = "20dp"
-                android:background="#1B6A6A6A"
+                android:hint="@string/player_name_hint"
+                android:background="@color/light_grey"
                 android:textColor="#27347A"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft = "10dp"
@@ -249,22 +233,20 @@
                 android:id="@+id/player8Label"
                 android:layout_width="match_parent"
                 android:layout_height="47dp"
-                android:fontFamily="@font/stay_happy"
                 android:gravity="center_horizontal"
-                android:text="Player Eight: "
+                android:text="@string/player_8"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#6A6A6A"
-                android:textSize="30dp" />
+                android:textColor="@color/navy"
+                />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/player8Input"
                 android:layout_width="match_parent"
-                android:hint="player name"
-                android:textSize = "20dp"
-                android:background="#1B6A6A6A"
+                android:hint="@string/player_name_hint"
+                android:background="@color/light_grey"
                 android:textColor="#27347A"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft = "10dp"
@@ -275,12 +257,12 @@
                 android:id="@+id/doneNewGame"
                 android:layout_width="match_parent"
                 android:layout_height="89dp"
-                android:background="#27347A"
+                android:background="@color/navy"
                 android:fontFamily="@font/stay_happy"
                 android:onClick="toGame"
-                android:text="Done"
+                android:text="@string/done_button"
                 android:textColor="#FFFFFF"
-                android:textSize="50dp" />
+                />
 
         </LinearLayout>
     </ScrollView>

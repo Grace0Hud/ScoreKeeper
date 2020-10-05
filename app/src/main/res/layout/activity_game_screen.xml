@@ -30,11 +30,11 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/admiration_pains_font"
                 android:gravity="center_horizontal"
-                android:text="Game"
+                android:text="@string/game"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="@color/navy"
-                android:textSize="40dp" />
+                />
 
             <Button
                 android:id="@+id/player1Display"
@@ -42,11 +42,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
-                android:fontFamily="@font/berner_basisschrift"
                 android:onClick="onClickPlayer1Button"
-                android:text="filler text\nuser info here"
+                android:text="@string/player_button_filler"
                 android:textColor="@color/navy"
-                android:textSize="50dp" />
+                 />
 
             <Button
                 android:id="@+id/player2Display"
@@ -54,11 +53,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
-                android:fontFamily="@font/berner_basisschrift"
                 android:onClick="onClickPlayer2Button"
-                android:text="filler text\nuser info here"
+                android:text="@string/player_button_filler"
                 android:textColor="@color/navy"
-                android:textSize="50dp" />
+                />
 
             <Button
                 android:id="@+id/player3Display"
@@ -66,11 +64,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
-                android:fontFamily="@font/berner_basisschrift"
                 android:onClick="onClickPlayer3Button"
-                android:text="filler text\nuser info here"
+                android:text="@string/player_button_filler"
                 android:textColor="@color/navy"
-                android:textSize="50dp" />
+                />
 
             <Button
                 android:id="@+id/player4Display"
@@ -78,11 +75,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
-                android:fontFamily="@font/berner_basisschrift"
                 android:onClick="onClickPlayer4Button"
-                android:text="filler text\nuser info here"
+                android:text="@string/player_button_filler"
                 android:textColor="@color/navy"
-                android:textSize="50dp" />
+                />
 
             <Button
                 android:id="@+id/player5Display"
@@ -90,46 +86,38 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
-                android:fontFamily="@font/berner_basisschrift"
-                android:text="filler text\nuser info here"
+                android:text="@string/player_button_filler"
                 android:textColor="@color/navy"
-                android:textSize="50dp"
                 android:onClick="onClickPlayer5Button"/>
 
             <Button
                 android:id="@+id/player6Display"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text = "filler text\nuser info here"
+                android:text="@string/player_button_filler"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
                 android:textColor="@color/navy"
-                android:textSize="50dp"
-                android:fontFamily="@font/berner_basisschrift"
                 android:onClick="onClickPlayer6Button"/>
 
             <Button
                 android:id="@+id/player7Display"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text = "filler text\nuser info here"
+                android:text="@string/player_button_filler"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
                 android:textColor="@color/navy"
-                android:textSize="50dp"
-                android:fontFamily="@font/berner_basisschrift"
                 android:onClick="onClickPlayer7Button"/>
 
             <Button
                 android:id="@+id/player8Display"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text = "filler text\nuser info here"
+                android:text="@string/player_button_filler"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
                 android:textColor="@color/navy"
-                android:textSize="50dp"
-                android:fontFamily="@font/berner_basisschrift"
                 android:onClick="onClickPlayer8Button"/>
 
         </LinearLayout>
@@ -150,18 +138,18 @@
             android:id="@+id/renameButton"
             android:layout_width="116dp"
             android:layout_height="wrap_content"
-            android:text="rename"
+            android:text="@string/rename_button"
             android:fontFamily="@font/stay_happy"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:background="@drawable/button_border"
-            android:layout_gravity="left"/>
+            android:layout_gravity="start"/>
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="57585"
-            android:textSize="50dp"
+            android:textSize="70sp"
             android:textColor="#FFFFFFFF"
             android:layout_gravity="center_horizontal"
             android:textAlignment="center"
@@ -171,12 +159,18 @@
             android:id="@+id/endGameButton"
             android:layout_width="116dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:background="@drawable/button_border"
             android:fontFamily="@font/stay_happy"
             android:onClick="onClickEndGame"
-            android:text="End Game"
-            android:textSize="25dp" />
+            android:text="@string/end_game_button"
+            android:textSize="25sp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -189,12 +183,12 @@
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
+                android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginBottom="30dp"
                 android:background="@drawable/nav_button_styles"
                 android:text="-10"
                 android:textColor="#FFFFFF"
-                android:textSize="30dp"
                 android:layout_weight="1"
                 android:onClick="onClickMinus10"/>
 
@@ -207,7 +201,6 @@
                 android:background="@drawable/nav_button_styles"
                 android:text="-5"
                 android:textColor="#FFFFFF"
-                android:textSize="30dp"
                 android:layout_weight="1"
                 android:onClick="onClickMinus5"/>
 
@@ -220,14 +213,14 @@
                 android:background="@drawable/nav_button_styles"
                 android:text="-1"
                 android:textColor="#FFFFFF"
-                android:textSize="30dp"
                 android:layout_weight="1"
-                android:onClick="onClickMinus1"/>
-
+                android:onClick="onClickMinus1"
+                />
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5" />
+                android:layout_weight="0.5"
+                />
 
             <Button
                 android:id="@+id/plus1"
@@ -238,7 +231,6 @@
                 android:background="@drawable/nav_button_styles"
                 android:text="+1"
                 android:textColor="#FFFFFF"
-                android:textSize="30dp"
                 android:layout_weight="1"
                 android:onClick="onClickAdd1"/>
 
@@ -251,7 +243,6 @@
                 android:background="@drawable/nav_button_styles"
                 android:text="+5"
                 android:textColor="#FFFFFF"
-                android:textSize="30dp"
                 android:layout_weight="1"
                 android:onClick="onClickAdd5"/>
 
@@ -260,12 +251,12 @@
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
+                android:layout_marginEnd="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="30dp"
                 android:background="@drawable/nav_button_styles"
                 android:text="+10"
                 android:textColor="#FFFFFF"
-                android:textSize="30dp"
                 android:layout_weight="1"
                 android:onClick="onClickAdd10"/>
         </LinearLayout>

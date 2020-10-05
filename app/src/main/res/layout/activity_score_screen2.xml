@@ -16,18 +16,18 @@
         android:layout_marginTop="10dp"
         android:fontFamily="@font/admiration_pains_font"
         android:gravity="center_horizontal"
-        android:text="Scores"
+        android:text="@string/scores"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/navy"
-        android:textSize="60dp" />
+        android:textSize="60sp" />
 
     <TextView
         android:id="@+id/scoreOutputTV"
         android:layout_width="match_parent"
         android:layout_height="555dp"
-        android:text="Output to go here"
-        android:textSize="50dp" />
+        android:text="@string/score_output_filler"
+        />
 
     <Button
         android:id="@+id/newGameScoreScreen"
@@ -37,7 +37,7 @@
         android:background="@drawable/button_border"
         android:fontFamily="@font/stay_happy"
         android:onClick="onClickNewGameScoreScreen"
-        android:text="New Game"
+        android:text="@string/new_game_button"
         android:textColor="@color/navy"
-        android:textSize="60dp" />
+        android:textSize="60sp" />
 </LinearLayout>

@@ -6,6 +6,8 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name = "android:fontFamily">@font/berner_basisschrift</item>
+        <item name = "android:textSize"> 50sp </item>
     </style>
 
     <style name="AppTheme.NoActionBar">
