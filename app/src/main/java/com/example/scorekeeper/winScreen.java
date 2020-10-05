@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class winScreen extends AppCompatActivity {
 
     @Override
@@ -14,10 +16,22 @@ public class winScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_win_screen);
 
-        //displaying the name of the winning player
-        String winner = getIntent().getStringExtra("winner");
-        TextView winnerDisplay = findViewById(R.id.winnerDisplay);
+        ArrayList<Player> rankedPlayers = new ArrayList<>();
+        String winner = "";
+        /*
+        if(getIntent().getStringExtra("winner") != "")
+        {
+             winner = getIntent().getStringExtra("winner");
+             rankedPlayers = getIntent().getParcelableArrayListExtra("playersRanked");
+        }
 
+         */
+            //rankedPlayers = getIntent().getParcelableArrayListExtra("players");
+        Player winningPlayer = getIntent().getParcelableExtra("winner");
+        winner = winningPlayer.getPlayerName();
+        //displaying the name of the winning player
+
+        TextView winnerDisplay = findViewById(R.id.winnerDisplay);
         winnerDisplay.setText(winner + " Wins");
     }
 

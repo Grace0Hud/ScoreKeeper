@@ -1,10 +1,12 @@
 package com.example.scorekeeper;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.Log;
 
 import java.util.ArrayList;
 
-public class Player {
+public class Player implements Parcelable {
     private String name;
     private int score;
     private static int numPlayers = 0;
@@ -53,9 +55,9 @@ public class Player {
     {
         return numPlayers;
     }//end getNumPlayers
-    
+
     //compares list of players and returns the largest
-    public ArrayList<Player> rank(ArrayList<Player> playerList)
+    public static ArrayList<Player> rank(ArrayList<Player> playerList)
     {
         Player indivPlayer = playerList.get(0);
         ArrayList<Player> output = new ArrayList<Player>();
@@ -65,6 +67,7 @@ public class Player {
             {
                indivPlayer = comparePlayerScores(playerList.get(i), playerList.get(j));
             }//end inner for
+            Log.i("RankedPlayer: ", i + ": " + indivPlayer);
             output.add(indivPlayer);
             playerList.remove(i);
         }//end outer for
@@ -72,7 +75,7 @@ public class Player {
     }//end compareManyPlayerScores method
 
     //compares the scores of two players
-    private Player comparePlayerScores(Player firstPlayer, Player secondPlayer)
+    private static Player comparePlayerScores(Player firstPlayer, Player secondPlayer)
     {
         int first = firstPlayer.getScore();
         int second = secondPlayer.getScore();
@@ -83,6 +86,34 @@ public class Player {
         }
         return secondPlayer;
     }//end method to compare players
+
+    //making Player objects parceable
+
+        public int describeContents() {
+            return 0;
+        }
+
+        public void writeToParcel(Parcel out, int flags) {
+            out.writeString(name);
+            out.writeInt(score);
+        }
+
+        public static final Parcelable.Creator<Player> CREATOR
+                = new Parcelable.Creator<Player>() {
+            public Player createFromParcel(Parcel in) {
+                return new Player(in);
+            }
+
+            public Player[] newArray(int size) {
+                return new Player[size];
+            }
+        };
+
+        private Player(Parcel in) {
+            name = in.readString();
+            score = in.readInt();
+        }
+
     public String toString()
     {
         String output = "Player Name: " + name;

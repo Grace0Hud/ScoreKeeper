@@ -177,6 +177,13 @@ public class gameScreen extends AppCompatActivity
     {
         Intent intent = new Intent(this, winScreen.class);
 
+        //found the problem line
+        //ArrayList<Player> rankedPlayers = Player.rank(players);
+
+        Player testPlayer = new Player("test");
+       // intent.putExtra("players", rankedPlayers);
+        intent.putExtra("winner", testPlayer);
+        //starts up win screen
         startActivity(intent);
     }//end onClickEndGame
 
@@ -296,12 +303,17 @@ public class gameScreen extends AppCompatActivity
                 //if a point limit has been set
                 //and the player is above the point limit
                 //that player wins
+                /*
                 if((pointLimit > 0) && (players.get(i).getScore() >= pointLimit))
                 {
                     Intent intent = new Intent(this, winScreen.class);
                     intent.putExtra("winner", players.get(i).getPlayerName());
+                    ArrayList<Player> rankedPlayers = Player.rank(players);
+                    intent.putExtra("playersRanked", rankedPlayers);
                     startActivity(intent);
                 }//end if win
+
+                 */
             }//end if validating which player
         }//end for cycling through player and button arrays
     }//end toggle buttons method
