@@ -33,7 +33,7 @@
                 android:text="Game"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#27347A"
+                android:textColor="@color/navy"
                 android:textSize="40dp" />
 
             <Button
@@ -45,7 +45,7 @@
                 android:fontFamily="@font/berner_basisschrift"
                 android:onClick="onClickPlayer1Button"
                 android:text="filler text\nuser info here"
-                android:textColor="#27347A"
+                android:textColor="@color/navy"
                 android:textSize="50dp" />
 
             <Button
@@ -57,7 +57,7 @@
                 android:fontFamily="@font/berner_basisschrift"
                 android:onClick="onClickPlayer2Button"
                 android:text="filler text\nuser info here"
-                android:textColor="#27347A"
+                android:textColor="@color/navy"
                 android:textSize="50dp" />
 
             <Button
@@ -69,7 +69,7 @@
                 android:fontFamily="@font/berner_basisschrift"
                 android:onClick="onClickPlayer3Button"
                 android:text="filler text\nuser info here"
-                android:textColor="#27347A"
+                android:textColor="@color/navy"
                 android:textSize="50dp" />
 
             <Button
@@ -81,7 +81,7 @@
                 android:fontFamily="@font/berner_basisschrift"
                 android:onClick="onClickPlayer4Button"
                 android:text="filler text\nuser info here"
-                android:textColor="#27347A"
+                android:textColor="@color/navy"
                 android:textSize="50dp" />
 
             <Button
@@ -92,7 +92,7 @@
                 android:background="@drawable/button_border"
                 android:fontFamily="@font/berner_basisschrift"
                 android:text="filler text\nuser info here"
-                android:textColor="#27347A"
+                android:textColor="@color/navy"
                 android:textSize="50dp"
                 android:onClick="onClickPlayer5Button"/>
 
@@ -103,7 +103,7 @@
                 android:text = "filler text\nuser info here"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
-                android:textColor="#27347A"
+                android:textColor="@color/navy"
                 android:textSize="50dp"
                 android:fontFamily="@font/berner_basisschrift"
                 android:onClick="onClickPlayer6Button"/>
@@ -115,7 +115,7 @@
                 android:text = "filler text\nuser info here"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
-                android:textColor="#27347A"
+                android:textColor="@color/navy"
                 android:textSize="50dp"
                 android:fontFamily="@font/berner_basisschrift"
                 android:onClick="onClickPlayer7Button"/>
@@ -127,7 +127,7 @@
                 android:text = "filler text\nuser info here"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
-                android:textColor="#27347A"
+                android:textColor="@color/navy"
                 android:textSize="50dp"
                 android:fontFamily="@font/berner_basisschrift"
                 android:onClick="onClickPlayer8Button"/>
@@ -144,7 +144,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2"
         app:layout_constraintVertical_bias="1.0"
-        android:background="#27347A">
+        android:background="@color/navy">
 
         <Button
             android:id="@+id/renameButton"

@@ -61,10 +61,12 @@ public class Player implements Parcelable {
     {
         Player indivPlayer = playerList.get(0);
         ArrayList<Player> output = new ArrayList<Player>();
+        Log.i("RankedPlayer", "------before for loop-------");
         for(int i = 0; i < playerList.size(); i++)
         {
             for(int j = i; j <playerList.size(); i++)
             {
+                Log.i("RankedPlayer", "------inner for loop-------");
                indivPlayer = comparePlayerScores(playerList.get(i), playerList.get(j));
             }//end inner for
             Log.i("RankedPlayer: ", i + ": " + indivPlayer);
