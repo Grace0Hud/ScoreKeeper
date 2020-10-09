@@ -112,7 +112,7 @@
                 android:background="@color/light_grey"
                 android:hint="@string/player_name_hint"
                 android:textAlignment="center"
-                android:textColor="#27347A" />
+                />
 
             <TextView
                 android:id="@+id/player3Label"
@@ -130,7 +130,6 @@
                 android:layout_width="match_parent"
                 android:hint="@string/player_name_hint"
                 android:background="@color/light_grey"
-                android:textColor="#27347A"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:layout_gravity="center_horizontal"
@@ -158,7 +157,7 @@
                 android:background="@color/light_grey"
                 android:hint="@string/player_name_hint"
                 android:textAlignment="center"
-                android:textColor="#27347A" />
+                />
 
             <TextView
                 android:id="@+id/player5Label"
@@ -176,7 +175,6 @@
                 android:layout_width="match_parent"
                 android:hint="@string/player_name_hint"
                 android:background="@color/light_grey"
-                android:textColor="#27347A"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:layout_gravity="center_horizontal"
@@ -199,7 +197,6 @@
                 android:layout_width="match_parent"
                 android:hint="@string/player_name_hint"
                 android:background="@color/light_grey"
-                android:textColor="#27347A"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:layout_gravity="center_horizontal"
@@ -222,7 +219,6 @@
                 android:layout_width="match_parent"
                 android:hint="@string/player_name_hint"
                 android:background="@color/light_grey"
-                android:textColor="#27347A"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:layout_gravity="center_horizontal"
@@ -245,7 +241,6 @@
                 android:layout_width="match_parent"
                 android:hint="@string/player_name_hint"
                 android:background="@color/light_grey"
-                android:textColor="#27347A"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:layout_gravity="center_horizontal"

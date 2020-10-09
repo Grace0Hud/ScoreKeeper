@@ -5,4 +5,5 @@
     <color name="colorAccent">#03DAC5</color>
     <color name = "navy">#27347A</color>
     <color name="light_grey">#1B6A6A6A</color>
+    <color name = "dark_grey">#4a4b52</color>
 </resources>
