@@ -86,6 +86,8 @@ public class gameScreen extends AppCompatActivity
         playerToggle(clickedButton, 0);
 
 
+        //testing and debugging of rank method
+        //Player.rank(players);
         /*
 
         String player1Name = getIntent().getStringExtra("player1Name");
@@ -178,11 +180,12 @@ public class gameScreen extends AppCompatActivity
         Intent intent = new Intent(this, winScreen.class);
 
         //found the problem line
-        //ArrayList<Player> rankedPlayers = Player.rank(players);
+        //problem in rank method
+        ArrayList<Player> rankedPlayers = Player.rank(players);
 
-        Player testPlayer = new Player("test");
-       // intent.putExtra("players", rankedPlayers);
-        intent.putExtra("winner", testPlayer);
+        //Player testPlayer = new Player("test");
+        intent.putExtra("players", rankedPlayers);
+        //intent.putExtra("winner", testPlayer);
         //starts up win screen
         startActivity(intent);
     }//end onClickEndGame

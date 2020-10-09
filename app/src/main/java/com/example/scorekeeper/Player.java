@@ -4,9 +4,11 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class Player implements Parcelable {
+public class Player implements Parcelable,Comparable<Player>{
     private String name;
     private int score;
     private static int numPlayers = 0;
@@ -59,37 +61,91 @@ public class Player implements Parcelable {
     //compares list of players and returns the largest
     public static ArrayList<Player> rank(ArrayList<Player> playerList)
     {
-        Log.i("RankedPlayer", "------start of method-------");
+        ArrayList output = playerList;
+        Collections.sort(output);
+
+            /*
+            ArrayList<Player> temp = playerList;
+            ArrayList<Player> output = new ArrayList<>();
+
+            for(int i = 0; i < temp.size(); i++)
+            {
+                Player indivPlayer = temp.get(i);
+                for(int j = i + 1; j < temp.size(); j++)
+                {
+                   Player checkPlayer = temp.get(j);
+                    if(checkPlayer.getScore() > indivPlayer.getScore())
+                    {
+                        indivPlayer = checkPlayer;
+                    }//inner if
+                }//inner for
+                output.add(indivPlayer);
+               System.out.println("Player " + i + ": " + indivPlayer.getPlayerName());
+                temp.remove(i);
+            }//end outer for loop
+            //System.out.println("--------------------------------------");
+            return output;
+
+
+             */
+        /*
+        //Log.i("RankedPlayer", "------start of method-------");
         Player indivPlayer = playerList.get(0);
         ArrayList<Player> output = new ArrayList<Player>();
-        Log.i("RankedPlayer", "------before for loop-------");
+       // Log.i("RankedPlayer", "------before for loop-------");
         for(int i = 0; i < playerList.size(); i++)
         {
-            for(int j = i; j <playerList.size(); i++)
+            for(int j = i; j <playerList.size(); j++)
             {
-                Log.i("RankedPlayer", "------inner for loop-------");
+                //Log.i("RankedPlayer", "------inner for loop-------");
                indivPlayer = comparePlayerScores(playerList.get(i), playerList.get(j));
             }//end inner for
-            Log.i("RankedPlayer: ", i + ": " + indivPlayer);
+            Log.i("RankedPlayer: ", i + ": " + indivPlayer.getPlayerName() + ", Score: " + indivPlayer.getScore());
             output.add(indivPlayer);
             playerList.remove(i);
         }//end outer for
         return output;
+
+         */
+        return output;
     }//end compareManyPlayerScores method
 
-    //compares the scores of two players
-    private static Player comparePlayerScores(Player firstPlayer, Player secondPlayer)
-    {
-        int first = firstPlayer.getScore();
-        int second = secondPlayer.getScore();
 
-        if(first > second)
-        {
-            return firstPlayer;
+    /*
+        //making Player objects parceable
+
+        public int describeContents() {
+            return 0;
         }
-        return secondPlayer;
-    }//end method to compare players
 
+        public void writeToParcel(Parcel out, int flags) {
+            out.writeString(name);
+            out.writeInt(score);
+        }
+
+        public static final Parcelable.Creator<Player> CREATOR
+                = new Parcelable.Creator<Player>() {
+            public Player createFromParcel(Parcel in) {
+                return new Player(in);
+            }
+
+            public Player[] newArray(int size) {
+                return new Player[size];
+            }
+        };
+
+        private Player(Parcel in) {
+            name = in.readString();
+            score = in.readInt();
+        }
+
+     */
+
+    @Override
+    public int compareTo(Player player)
+    {
+        return Integer.compare(player.getScore(), this.getScore());
+    }
     //making Player objects parceable
 
         public int describeContents() {

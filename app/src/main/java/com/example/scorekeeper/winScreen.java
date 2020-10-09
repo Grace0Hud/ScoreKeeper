@@ -26,9 +26,9 @@ public class winScreen extends AppCompatActivity {
         }
 
          */
-            //rankedPlayers = getIntent().getParcelableArrayListExtra("players");
-        Player winningPlayer = getIntent().getParcelableExtra("winner");
-        winner = winningPlayer.getPlayerName();
+        rankedPlayers = getIntent().getParcelableArrayListExtra("players");
+       // Player winningPlayer = getIntent().getParcelableExtra("winner");
+        winner = rankedPlayers.get(0).getPlayerName();
         //displaying the name of the winning player
 
         TextView winnerDisplay = findViewById(R.id.winnerDisplay);
