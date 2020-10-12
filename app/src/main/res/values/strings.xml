@@ -5,7 +5,7 @@
     <string name="title_activity_score_screen">scoreScreen</string>
     <string name="game">Game</string>
     <string name="player_button_filler">filler text\nuser info here</string>
-    <string name="rename_button">rename</string>
+    <string name="add_player_button">add player</string>
     <string name="end_game_button">End Game</string>
     <string name="win_filler_text">Player Name Wins</string>
     <string name="new_game_button">New Game</string>

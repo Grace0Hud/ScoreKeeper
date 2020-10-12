@@ -150,15 +150,16 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/renameButton"
+                    android:id="@+id/addPlayer"
                     android:layout_width="116dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:background="@drawable/button_border"
                     android:fontFamily="@font/stay_happy"
-                    android:text="@string/rename_button"
+                    android:text="@string/add_player_button"
                     android:textSize="25sp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:onClick="onClickAddPlayer"/>
 
                 <TextView
                     android:id="@+id/largeScoreTV"
