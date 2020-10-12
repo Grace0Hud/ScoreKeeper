@@ -39,9 +39,21 @@ public class gameScreen extends AppCompatActivity
         String player7Name = getIntent().getStringExtra("player7Name");
         String player8Name = getIntent().getStringExtra("player8Name");
 
+        ArrayList<String> playerNames = new ArrayList();
+        playerNames.add(player1Name);
+        playerNames.add(player2Name);
+        playerNames.add(player3Name);
+        playerNames.add(player4Name);
+        playerNames.add(player5Name);
+        playerNames.add(player6Name);
+        playerNames.add(player7Name);
+        playerNames.add(player8Name);
+
         //retrieving playTo information
         pointLimit = getIntent().getIntExtra("playTo", -1);
 
+
+        /*
         Player player1 = new Player(player1Name);
         Player player2 = new Player(player2Name);
         Player player3 = new Player(player3Name);
@@ -64,7 +76,7 @@ public class gameScreen extends AppCompatActivity
         players.add(player7);
         players.add(player8);
 
-
+*/
         //linking button objects to button resources
         Button player1Button = findViewById(R.id.player1Display);
         Button player2Button = findViewById(R.id.player2Display);
@@ -85,6 +97,22 @@ public class gameScreen extends AppCompatActivity
         playerButtons.add(player7Button);
         playerButtons.add(player8Button);
 
+        //creating player objects and adding them to the array
+        //the goal of this is to not add any player objects that have not been named
+        for(int i = 0; i < playerNames.size(); i++)
+        {
+            if(!playerNames.get(i).equals(""))
+            {
+                players.add(new Player(playerNames.get(i)));
+                playerButtons.get(i).setText(players.get(i).getPlayerName() + ": " + players.get(i).getScore());
+            }
+            else
+            {
+                playerButtons.get(i).setVisibility(View.INVISIBLE);
+            }
+        }
+
+        /*
         //checking if a player name has been entered for the player object
         //if not, then the player button is set to invisible.
         //space cannot be occupied by other widgets but it won't be seen or presable by users
@@ -100,6 +128,8 @@ public class gameScreen extends AppCompatActivity
             }
         }//end for loop
 
+
+         */
         //testing and debugging of rank method
         //Player.rank(players);
         /*

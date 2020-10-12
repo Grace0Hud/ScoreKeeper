@@ -1,8 +1,11 @@
 package com.example.scorekeeper;
 
+import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
+
+import androidx.annotation.RequiresApi;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -141,6 +144,7 @@ public class Player implements Parcelable,Comparable<Player>{
 
      */
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public int compareTo(Player player)
     {
