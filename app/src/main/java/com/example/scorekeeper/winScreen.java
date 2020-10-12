@@ -10,13 +10,14 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class winScreen extends AppCompatActivity {
+    ArrayList<Player> rankedPlayers = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_win_screen);
 
-        ArrayList<Player> rankedPlayers = new ArrayList<>();
+
         String winner = "";
         /*
         if(getIntent().getStringExtra("winner") != "")
@@ -43,6 +44,7 @@ public class winScreen extends AppCompatActivity {
     public void onClickViewScore(View view)
     {
         Intent intent = new Intent(this, scoreScreen.class);
+        intent.putExtra("rankedPlayers", rankedPlayers);
         startActivity(intent);
     }//end view scores on click
 }

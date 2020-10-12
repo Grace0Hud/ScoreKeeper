@@ -85,7 +85,20 @@ public class gameScreen extends AppCompatActivity
         playerButtons.add(player7Button);
         playerButtons.add(player8Button);
 
-        playerToggle(clickedButton, 0);
+        //checking if a player name has been entered for the player object
+        //if not, then the player button is set to invisible.
+        //space cannot be occupied by other widgets but it won't be seen or presable by users
+        for(int i = 0; i< players.size(); i++)
+        {
+            if(players.get(i).getPlayerName().equals(""))
+            {
+                playerButtons.get(i).setVisibility(View.INVISIBLE);
+            }
+            else
+            {
+                playerButtons.get(i).setText(players.get(i).getPlayerName() + ": " + players.get(i).getScore());
+            }
+        }//end for loop
 
         //testing and debugging of rank method
         //Player.rank(players);
@@ -280,24 +293,6 @@ public class gameScreen extends AppCompatActivity
 
     private void playerToggle(int player, int num)
     {
-        if(player == 0)
-        {
-            //checking if a player name has been entered for the player object
-            //if not, then the player button is set to invisible.
-            //space cannot be occupied by other widgets but it won't be seen or presable by users
-            for(int i = 0; i< players.size(); i++)
-            {
-                if(players.get(i).getPlayerName().equals(""))
-                {
-                    playerButtons.get(i).setVisibility(View.INVISIBLE);
-                }
-                else
-                {
-                    playerButtons.get(i).setText(players.get(i).getPlayerName() + ": " + players.get(i).getScore());
-                }
-            }//end for loop
-        }//end set up validation
-
         //checks which player is selected
         //then adds the number of points specified
         //then updates textview
