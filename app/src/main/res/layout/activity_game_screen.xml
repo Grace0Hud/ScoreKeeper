@@ -11,7 +11,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/navBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,8 +33,7 @@
                 android:text="@string/game"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="@color/navy"
-                />
+                android:textColor="@color/navy" />
 
             <Button
                 android:id="@+id/player1Display"
@@ -44,8 +43,7 @@
                 android:background="@drawable/button_border"
                 android:onClick="onClickPlayer1Button"
                 android:text="@string/player_button_filler"
-                android:textColor="@color/navy"
-                 />
+                android:textColor="@color/navy" />
 
             <Button
                 android:id="@+id/player2Display"
@@ -55,8 +53,7 @@
                 android:background="@drawable/button_border"
                 android:onClick="onClickPlayer2Button"
                 android:text="@string/player_button_filler"
-                android:textColor="@color/navy"
-                />
+                android:textColor="@color/navy" />
 
             <Button
                 android:id="@+id/player3Display"
@@ -66,8 +63,7 @@
                 android:background="@drawable/button_border"
                 android:onClick="onClickPlayer3Button"
                 android:text="@string/player_button_filler"
-                android:textColor="@color/navy"
-                />
+                android:textColor="@color/navy" />
 
             <Button
                 android:id="@+id/player4Display"
@@ -77,8 +73,7 @@
                 android:background="@drawable/button_border"
                 android:onClick="onClickPlayer4Button"
                 android:text="@string/player_button_filler"
-                android:textColor="@color/navy"
-                />
+                android:textColor="@color/navy" />
 
             <Button
                 android:id="@+id/player5Display"
@@ -86,39 +81,45 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
+                android:onClick="onClickPlayer5Button"
                 android:text="@string/player_button_filler"
-                android:textColor="@color/navy"
-                android:onClick="onClickPlayer5Button"/>
+                android:textColor="@color/navy" />
 
             <Button
                 android:id="@+id/player6Display"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/player_button_filler"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
-                android:textColor="@color/navy"
-                android:onClick="onClickPlayer6Button"/>
+                android:onClick="onClickPlayer6Button"
+                android:text="@string/player_button_filler"
+                android:textColor="@color/navy" />
 
             <Button
                 android:id="@+id/player7Display"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/player_button_filler"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
-                android:textColor="@color/navy"
-                android:onClick="onClickPlayer7Button"/>
+                android:onClick="onClickPlayer7Button"
+                android:text="@string/player_button_filler"
+                android:textColor="@color/navy" />
 
             <Button
                 android:id="@+id/player8Display"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/player_button_filler"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_border"
-                android:textColor="@color/navy"
-                android:onClick="onClickPlayer8Button"/>
+                android:onClick="onClickPlayer8Button"
+                android:text="@string/player_button_filler"
+                android:textColor="@color/navy" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                app:srcCompat="@drawable/white_box" />
 
         </LinearLayout>
     </ScrollView>
