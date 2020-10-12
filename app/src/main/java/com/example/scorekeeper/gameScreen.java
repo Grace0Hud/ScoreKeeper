@@ -239,43 +239,52 @@ public class gameScreen extends AppCompatActivity
     }//end onClickEndGame
 
     public void onClickAddPlayer(View view) {
-        // get prompts.xml view
-        LayoutInflater layoutInflater = LayoutInflater.from(this);
+        //validates that the game has less than 8 players (which is the max)
+        if(Player.getNumPlayers() < 8)
+        {
+            //prompts for creation of new player
+            // get prompts.xml view
+            LayoutInflater layoutInflater = LayoutInflater.from(this);
 
-        View promptView = layoutInflater.inflate(R.layout.add_player_dialogue, null);
+            View promptView = layoutInflater.inflate(R.layout.add_player_dialogue, null);
 
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 
-        // set prompts.xml to be the layout file of the alertdialog builder
-        alertDialogBuilder.setView(promptView);
+            // set prompts.xml to be the layout file of the alertdialog builder
+            alertDialogBuilder.setView(promptView);
 
-        final EditText input = (EditText) promptView.findViewById(R.id.newPlayerName);
+            final EditText input = (EditText) promptView.findViewById(R.id.newPlayerName);
 
-        // setup a dialog window
-        alertDialogBuilder
-                .setCancelable(false)
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // get user input and set it to result
-                        // editTextMainScreen.setText(input.getText());
-                        players.add(new Player(input.getText().toString()));
-                        playerButtons.get(players.size()-1).setText(players.get(players.size()-1).getPlayerName() + ": " + players.get(players.size()-1).getScore());
-                        playerButtons.get(players.size()-1).setVisibility(View.VISIBLE);
+            // setup a dialog window
+            alertDialogBuilder
+                    .setCancelable(false)
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            // get user input and set it to result
+                            // editTextMainScreen.setText(input.getText());
+                            players.add(new Player(input.getText().toString()));
+                            playerButtons.get(players.size() - 1).setText(players.get(players.size() - 1).getPlayerName() + ": " + players.get(players.size() - 1).getScore());
+                            playerButtons.get(players.size() - 1).setVisibility(View.VISIBLE);
 
-                    }
-                })
-                .setNegativeButton("Cancel",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
-                            }
-                        });
+                        }
+                    })
+                    .setNegativeButton("Cancel",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            });
 
-        // create an alert dialog
-        AlertDialog alertD = alertDialogBuilder.create();
+            // create an alert dialog
+            AlertDialog alertD = alertDialogBuilder.create();
 
-        alertD.show();
-}
+            alertD.show();
+        }//end if
+        else
+        {
+            Toast.makeText(this, "You already have the max amount of players", Toast.LENGTH_SHORT).show();
+        }//end negative if
+}//end newPLayerClick
 
     //when player buttons are clicked
     public void onClickPlayer1Button(View view)
