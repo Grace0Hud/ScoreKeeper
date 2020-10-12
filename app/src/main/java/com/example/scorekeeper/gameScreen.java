@@ -7,7 +7,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -16,7 +19,6 @@ public class gameScreen extends AppCompatActivity
 
 
     private int clickedButton;
-
     ArrayList<Player> players = new ArrayList<>();
     ArrayList<Button> playerButtons = new ArrayList<>();
     int pointLimit;
@@ -84,7 +86,6 @@ public class gameScreen extends AppCompatActivity
         playerButtons.add(player8Button);
 
         playerToggle(clickedButton, 0);
-
 
         //testing and debugging of rank method
         //Player.rank(players);
@@ -194,44 +195,52 @@ public class gameScreen extends AppCompatActivity
     public void onClickPlayer1Button(View view)
     {
         clickedButton = 1;
+        updateScoreTV(0);
         //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end first player on click
 
     public void onClickPlayer2Button(View view)
     {
         clickedButton = 2;
+        updateScoreTV(1);
        // Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 2nd player on click
 
     public void onClickPlayer3Button(View view)
     {
         clickedButton = 3;
+        updateScoreTV(2);
         //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 3rd player on click
 
     public void onClickPlayer4Button(View view)
     {
         clickedButton = 4;
+        updateScoreTV(3);
        // Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 4th player on click
     public void onClickPlayer5Button(View view)
     {
         clickedButton = 5;
+        updateScoreTV(4);
         //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 5th player on click
     public void onClickPlayer6Button(View view)
     {
         clickedButton = 6;
+        updateScoreTV(5);
         //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 6th player on click
     public void onClickPlayer7Button(View view)
     {
         clickedButton = 7;
+        updateScoreTV(6);
         //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 7th player on click
     public void onClickPlayer8Button(View view)
     {
         clickedButton = 8;
+        updateScoreTV(7);
         //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 8th player on click
 
@@ -302,6 +311,7 @@ public class gameScreen extends AppCompatActivity
                 players.get(i).addPoints(num);
                // Log.i("NumPlayers/3: ", "------- " + Player.getNumPlayers() + "--------");
                 playerButtons.get(i).setText(players.get(i).getPlayerName() + ": " + players.get(i).getScore());
+                updateScoreTV(i);
 
                 //if a point limit has been set
                 //and the player is above the point limit
@@ -320,5 +330,12 @@ public class gameScreen extends AppCompatActivity
             }//end if validating which player
         }//end for cycling through player and button arrays
     }//end toggle buttons method
+
+    public void updateScoreTV(int player)
+    {
+        TextView scoreTV = findViewById(R.id.largeScoreTV);
+        scoreTV.setText(players.get(player).getScore() + "");
+    }
+
 
 }//end gameScreen

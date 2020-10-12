@@ -256,6 +256,7 @@
                 android:fontFamily="@font/stay_happy"
                 android:onClick="toGame"
                 android:text="@string/done_button"
+                android:textSize="100sp"
                 android:textColor="#FFFFFF"
                 />
 
