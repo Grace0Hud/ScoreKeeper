@@ -36,7 +36,6 @@
         android:layout_width="163dp"
         android:layout_height="85dp"
         android:layout_marginTop="158dp"
-        android:layout_marginBottom="16dp"
         android:background="@drawable/button_border"
         android:fontFamily="@font/stay_happy"
         android:onClick="onNewGameClick"
@@ -44,16 +43,15 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/winnerDisplay"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.752" />
 
     <Button
         android:id="@+id/toScoreButton"
-        android:layout_width="163dp"
-        android:layout_height="85dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="171dp"
+        android:layout_height="80dp"
         android:background="@drawable/button_border"
         android:fontFamily="@font/stay_happy"
         android:onClick="onClickViewScore"
@@ -61,8 +59,24 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.768"
         app:layout_constraintStart_toEndOf="@+id/newGameButtonWinScreen"
-        app:layout_constraintTop_toBottomOf="@+id/winnerDisplay"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.812" />
+
+    <Button
+        android:id="@+id/backToGameWinbtn"
+        android:layout_width="171dp"
+        android:layout_height="53dp"
+        android:background="@drawable/nav_button_styles"
+        android:fontFamily="@font/stay_happy"
+        android:text="back to game"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newGameButtonWinScreen"
+        app:layout_constraintVertical_bias="0.698" />
 </androidx.constraintlayout.widget.ConstraintLayout>

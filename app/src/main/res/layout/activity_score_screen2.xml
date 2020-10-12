@@ -25,9 +25,8 @@
     <TextView
         android:id="@+id/scoreOutputTV"
         android:layout_width="match_parent"
-        android:layout_height="555dp"
-        android:text="@string/score_output_filler"
-        />
+        android:layout_height="504dp"
+        android:text="@string/score_output_filler" />
 
     <Button
         android:id="@+id/newGameScoreScreen"
@@ -40,4 +39,14 @@
         android:text="@string/new_game_button"
         android:textColor="@color/navy"
         android:textSize="60sp" />
+
+    <Button
+        android:id="@+id/toGameScreenScorebtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back to Game"
+        android:fontFamily="@font/stay_happy"
+        android:background="@drawable/nav_button_styles"
+        android:textColor="#FFFFFF"
+        />
 </LinearLayout>
