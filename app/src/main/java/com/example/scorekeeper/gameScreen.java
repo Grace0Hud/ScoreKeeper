@@ -240,7 +240,7 @@ public class gameScreen extends AppCompatActivity
 
     public void onClickAddPlayer(View view) {
         //validates that the game has less than 8 players (which is the max)
-        if(Player.getNumPlayers() < 8)
+        if(players.size() < 8)
         {
             //prompts for creation of new player
             // get prompts.xml view
