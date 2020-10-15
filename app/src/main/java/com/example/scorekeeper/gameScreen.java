@@ -2,9 +2,11 @@ package com.example.scorekeeper;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -22,7 +24,7 @@ public class gameScreen extends AppCompatActivity
 {
 
 
-    private int clickedButton;
+    private int clickedButton = 0;
     ArrayList<Player> players = new ArrayList<>();
     ArrayList<Button> playerButtons = new ArrayList<>();
     int pointLimit;
@@ -289,6 +291,7 @@ public class gameScreen extends AppCompatActivity
     //when player buttons are clicked
     public void onClickPlayer1Button(View view)
     {
+        setButtonStyles(0);
         clickedButton = 1;
         updateScoreTV(0);
         //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
@@ -296,6 +299,7 @@ public class gameScreen extends AppCompatActivity
 
     public void onClickPlayer2Button(View view)
     {
+        setButtonStyles(1);
         clickedButton = 2;
         updateScoreTV(1);
        // Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
@@ -303,6 +307,7 @@ public class gameScreen extends AppCompatActivity
 
     public void onClickPlayer3Button(View view)
     {
+        setButtonStyles(2);
         clickedButton = 3;
         updateScoreTV(2);
         //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
@@ -310,30 +315,35 @@ public class gameScreen extends AppCompatActivity
 
     public void onClickPlayer4Button(View view)
     {
+        setButtonStyles(3);
         clickedButton = 4;
         updateScoreTV(3);
        // Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 4th player on click
     public void onClickPlayer5Button(View view)
     {
+        setButtonStyles(4);
         clickedButton = 5;
         updateScoreTV(4);
         //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 5th player on click
     public void onClickPlayer6Button(View view)
     {
+        setButtonStyles(5);
         clickedButton = 6;
         updateScoreTV(5);
         //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 6th player on click
     public void onClickPlayer7Button(View view)
     {
+        setButtonStyles(6);
         clickedButton = 7;
         updateScoreTV(6);
         //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
     }//end 7th player on click
     public void onClickPlayer8Button(View view)
     {
+        setButtonStyles(7);
         clickedButton = 8;
         updateScoreTV(7);
         //Toast.makeText(this, String.valueOf(clickedButton), Toast.LENGTH_LONG).show();
@@ -396,11 +406,8 @@ public class gameScreen extends AppCompatActivity
 
                 if((pointLimit > 0) && (players.get(i).getScore() >= pointLimit))
                 {
-                    Intent intent = new Intent(this, winScreen.class);
-                    //intent.putExtra("winner", players.get(i).getPlayerName());
-                    ArrayList<Player> rankedPlayers = Player.rank(players);
-                    intent.putExtra("players", rankedPlayers);
-                    startActivity(intent);
+                    playerButtons.get(i).setBackground(getBaseContext().getResources().getDrawable(R.drawable.nav_button_styles));
+                    Toast.makeText(this, players.get(i).getPlayerName() + " reached the point cap!", Toast.LENGTH_SHORT).show();
                 }//end if win
 
             }//end if validating which player
@@ -413,5 +420,15 @@ public class gameScreen extends AppCompatActivity
         scoreTV.setText(players.get(player).getScore() + "");
     }
 
+    public void setButtonStyles(int player)
+    {
+        if(clickedButton != 0)
+        {
+            playerButtons.get(clickedButton - 1).setBackground(getBaseContext().getResources().getDrawable(R.drawable.button_border));
+            playerButtons.get(clickedButton - 1).setTextColor(getResources().getColor(R.color.navy));
+        }
+        playerButtons.get(player).setBackgroundColor(getResources().getColor(R.color.navy));
+        playerButtons.get(player).setTextColor(getResources().getColor(R.color.white));
+    }
 
 }//end gameScreen

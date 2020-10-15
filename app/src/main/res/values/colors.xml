@@ -6,4 +6,6 @@
     <color name = "navy">#27347A</color>
     <color name="light_grey">#1B6A6A6A</color>
     <color name = "dark_grey">#4a4b52</color>
+    <color name = "light_blue">#bdebf0</color>
+    <color name="white">#FFFFFF</color>
 </resources>
