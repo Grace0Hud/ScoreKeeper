@@ -26,4 +26,5 @@
     <string name="player_7">Player 7</string>
     <string name="player_8">Player 8</string>
     <string name="done_button">Done</string>
+    <string name="back_to_game">back to game</string>
 </resources>

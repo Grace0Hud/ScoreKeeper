@@ -34,5 +34,4 @@ public class scoreScreen extends AppCompatActivity {
         Intent intent = new Intent(this, NewGameScreen.class);
         startActivity(intent);
     }
-
 }

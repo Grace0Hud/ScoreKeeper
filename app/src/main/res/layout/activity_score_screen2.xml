@@ -40,13 +40,4 @@
         android:textColor="@color/navy"
         android:textSize="60sp" />
 
-    <Button
-        android:id="@+id/toGameScreenScorebtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Back to Game"
-        android:fontFamily="@font/stay_happy"
-        android:background="@drawable/nav_button_styles"
-        android:textColor="#FFFFFF"
-        />
 </LinearLayout>

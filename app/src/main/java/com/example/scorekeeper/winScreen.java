@@ -3,6 +3,7 @@ package com.example.scorekeeper;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.IntentSender;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -47,4 +48,8 @@ public class winScreen extends AppCompatActivity {
         intent.putExtra("rankedPlayers", rankedPlayers);
         startActivity(intent);
     }//end view scores on click
+    public void onClickBackToGameWin(View view)
+    {
+        finish();
+    }//end onCLickBackToGame
 }
