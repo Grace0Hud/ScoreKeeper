@@ -23,40 +23,20 @@ public class NewGameScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_game_screen);
 
-        // get prompts.xml view
+        //will only start if this is the first time on this screen
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        if(sharedPreferences.getBoolean("IS_FIRST_TIME", true)) {
+        if(sharedPreferences.getBoolean("IS_FIRST_TIME", true))
+        {
             LayoutInflater layoutInflater = LayoutInflater.from(this);
-
-            View promptView = layoutInflater.inflate(R.layout.instructions_layout, null);
-
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-
-            // set prompts.xml to be the layout file of the alertdialog builder
-            alertDialogBuilder.setView(promptView);
-            // setup a dialog window
-            alertDialogBuilder
-                    .setCancelable(false)
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            dialog.cancel();
-                        }
-                    })
-                    .setNegativeButton("Cancel",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    dialog.cancel();
-                                }
-                            });
-
-            // create an alert dialog
-            AlertDialog alertD = alertDialogBuilder.create();
-
-            alertD.show();
+            startInstructDialogue();
             sharedPreferences.edit().putBoolean("IS_FIRST_TIME", false).apply();
-        }
+        }//end if
     }
 
+    public void toInstructions(View view)
+    {
+        startInstructDialogue();
+    }//end start instruct
     public void toGame(View view)
     {
         //retreiving inormation from the edit views
@@ -123,5 +103,36 @@ public class NewGameScreen extends AppCompatActivity {
         //starting up activity
         startActivity(intent);
     }//end toGame
+
+    private void startInstructDialogue()
+    {
+        LayoutInflater layoutInflater = LayoutInflater.from(this);
+
+        View promptView = layoutInflater.inflate(R.layout.instructions_layout, null);
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+
+        // set prompts.xml to be the layout file of the alertdialog builder
+        alertDialogBuilder.setView(promptView);
+        // setup a dialog window
+        alertDialogBuilder
+                .setCancelable(false)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                })
+                .setNegativeButton("Cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+        // create an alert dialog
+        AlertDialog alertD = alertDialogBuilder.create();
+
+        alertD.show();
+    }//end startInstructDialogue
 
 }//end newGameScreen

@@ -30,6 +30,20 @@
                 android:textColor="@color/navy"
                 android:textSize="100sp" />
 
+            <Button
+                android:id="@+id/instuctions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="43sp"
+                android:background="@color/navy"
+                android:textColor="@color/white"
+                android:text="@string/view_instructions"
+                android:onClick="toInstructions"/>
+
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
