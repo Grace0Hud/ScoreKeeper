@@ -22,25 +22,13 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="87dp"
-                android:fontFamily="@font/admiration_pains_font"
+                android:fontFamily="@font/a_black_crown"
                 android:gravity="center_horizontal"
                 android:text="@string/new_game_button"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="@color/navy"
-                android:textSize="50sp" />
-
-            <TextView
-                android:id="@+id/explanation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/stay_happy"
-                android:gravity="center_horizontal"
-                android:text="@string/explanation_new_game"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#6A6A6A"
-                android:textSize="30sp" />
+                android:textSize="100sp" />
 
             <TextView
                 android:id="@+id/textView4"

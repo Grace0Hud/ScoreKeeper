@@ -9,9 +9,9 @@
 
     <TextView
         android:id="@+id/titleTitle"
-        android:layout_width="550dp"
-        android:layout_height="350dp"
-        android:fontFamily="@font/admiration_pains_font"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/a_black_crown"
         android:gravity="center_horizontal"
         android:shadowColor="#0E426C"
         android:shadowDx="2.4"
@@ -20,7 +20,7 @@
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/navy"
-        android:textSize="100sp"
+        android:textSize="150sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

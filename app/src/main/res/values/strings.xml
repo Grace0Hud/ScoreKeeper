@@ -13,7 +13,10 @@
     <string name="scores">Scores</string>
     <string name="score_output_filler">Output to go here</string>
     <string name="title_text">Score Keeper</string>
-    <string name="explanation_new_game">Only fill out names for the number of players you have</string>
+    <string name="explanation_new_game">1. enter your values on this screen\n
+                                        2. leave any unneeded fields blank\n
+                                        3. when you are finished, click the button at the bottom\n
+                                        4. have a good game!</string>
     <string name="play_to">Play to:</string>
     <string name="point_cap">Point cap</string>
     <string name="player_1">Player 1</string>
@@ -27,4 +30,6 @@
     <string name="player_8">Player 8</string>
     <string name="done_button">Done</string>
     <string name="back_to_game">back to game</string>
+    <string name="instructions">Instructions</string>
+    <string name="name_of_player">Name of Player</string>
 </resources>

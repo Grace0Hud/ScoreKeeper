@@ -1,12 +1,18 @@
 package com.example.scorekeeper;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class NewGameScreen extends AppCompatActivity {
 
@@ -17,8 +23,40 @@ public class NewGameScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_game_screen);
 
+        // get prompts.xml view
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        if(sharedPreferences.getBoolean("IS_FIRST_TIME", true)) {
+            LayoutInflater layoutInflater = LayoutInflater.from(this);
 
+            View promptView = layoutInflater.inflate(R.layout.instructions_layout, null);
+
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+
+            // set prompts.xml to be the layout file of the alertdialog builder
+            alertDialogBuilder.setView(promptView);
+            // setup a dialog window
+            alertDialogBuilder
+                    .setCancelable(false)
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+                        }
+                    })
+                    .setNegativeButton("Cancel",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            });
+
+            // create an alert dialog
+            AlertDialog alertD = alertDialogBuilder.create();
+
+            alertD.show();
+            sharedPreferences.edit().putBoolean("IS_FIRST_TIME", false).apply();
+        }
     }
+
     public void toGame(View view)
     {
         //retreiving inormation from the edit views
