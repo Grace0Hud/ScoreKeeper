@@ -28,7 +28,7 @@ public class gameScreen extends AppCompatActivity
     ArrayList<Player> players = new ArrayList<>();
     ArrayList<Button> playerButtons = new ArrayList<>();
     int pointLimit;
-
+    int limit = -1;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -408,6 +408,7 @@ public class gameScreen extends AppCompatActivity
                 {
                     playerButtons.get(i).setBackground(getBaseContext().getResources().getDrawable(R.drawable.nav_button_styles));
                     Toast.makeText(this, players.get(i).getPlayerName() + " reached the point cap!", Toast.LENGTH_SHORT).show();
+                    limit = i;
                 }//end if win
 
             }//end if validating which player
@@ -424,11 +425,34 @@ public class gameScreen extends AppCompatActivity
     {
         if(clickedButton != 0)
         {
-            playerButtons.get(clickedButton - 1).setBackground(getBaseContext().getResources().getDrawable(R.drawable.button_border));
-            playerButtons.get(clickedButton - 1).setTextColor(getResources().getColor(R.color.navy));
+               if(limit == player)
+               {
+                   playerButtons.get(clickedButton - 1).setBackground(getBaseContext().getResources().getDrawable(R.drawable.button_border));
+                   playerButtons.get(clickedButton - 1).setTextColor(getResources().getColor(R.color.navy));
+                   playerButtons.get(player).setBackground(getBaseContext().getResources().getDrawable(R.drawable.nav_button_styles));
+                   playerButtons.get(player).setTextColor(getResources().getColor(R.color.dark_grey));
+               }
+               else if(limit == clickedButton - 1) {
+                   playerButtons.get(clickedButton - 1).setBackground(getBaseContext().getResources().getDrawable(R.drawable.lighter_nav_buttons));
+                   playerButtons.get(clickedButton - 1).setTextColor(getResources().getColor(R.color.white));
+                   playerButtons.get(player).setBackgroundColor(getResources().getColor(R.color.navy));
+                   playerButtons.get(player).setTextColor(getResources().getColor(R.color.white));
+               }
+               else
+                {
+                playerButtons.get(clickedButton - 1).setBackground(getBaseContext().getResources().getDrawable(R.drawable.button_border));
+                playerButtons.get(clickedButton - 1).setTextColor(getResources().getColor(R.color.navy));
+                playerButtons.get(player).setBackgroundColor(getResources().getColor(R.color.navy));
+                playerButtons.get(player).setTextColor(getResources().getColor(R.color.white));
+                }
         }
-        playerButtons.get(player).setBackgroundColor(getResources().getColor(R.color.navy));
-        playerButtons.get(player).setTextColor(getResources().getColor(R.color.white));
+        else
+        {
+            playerButtons.get(player).setBackgroundColor(getResources().getColor(R.color.navy));
+            playerButtons.get(player).setTextColor(getResources().getColor(R.color.white));
+        }
+
+
     }
 
 }//end gameScreen
