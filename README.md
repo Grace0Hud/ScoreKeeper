@@ -1,4 +1,10 @@
 # ScoreKeeper
+### Date started: 09/27/20 | Date finished: 10/17/20
+Created for Advanced Java Topics in Android Studio and entered into the 2020 Congressional App Challenge
+______________________________________________________________________________________________________________
+#### Assignment
+  Create an app for the [congressional app challenge](https://www.congressionalappchallenge.us/)and enter it into the competition
+#### Description
 An app to help users keep track of scores for card games.
 Consists of five screens.
 1. Welcome screen - simple title screen with link to next screen
@@ -7,3 +13,5 @@ Consists of five screens.
                  - includes and option to add users, end the game, and add or subtract points in increments of 10, 5, and 1
 4. Win screen -  starts when end game is pressed. It will display the name of the user with the most points
 5. Score screen - Linked to the win screen - gives an ordered list of the names based off their scores. 
+
+*I did not have a partner for this assignment*
